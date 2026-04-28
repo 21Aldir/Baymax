@@ -1,0 +1,1549 @@
+{
+  "framework": {
+    "name": "ISO/IEC 27001:2022 Annex A Controls",
+    "version": "ISO/IEC 27001:2022",
+    "source": "ISO/IEC 27001:2022 + ISO/IEC 27002:2022",
+    "total_controls": 93,
+    "assessment_date": null,
+    "report_period": {
+      "start_date": null,
+      "end_date": null
+    }
+  },
+  "controls": [
+    {
+      "id": "5.1",
+      "category": "Organizational Controls",
+      "control_name": "Policies for information security",
+      "description": "Establish, approve, publish, and review information security policies aligned with business strategy and regulatory requirements",
+      "is_new_2022": false,
+      "evaluation": {
+        "status": null,
+        "compliance_level": null,
+        "applicable": true,
+        "evidence_found": false,
+        "confidence_score": 0,
+        "document_references": [],
+        "findings": { "strengths": [], "gaps": [], "recommendations": [] }
+      }
+    },
+    {
+      "id": "5.2",
+      "category": "Organizational Controls",
+      "control_name": "Information security roles and responsibilities",
+      "description": "Define and allocate information security responsibilities across the organization",
+      "is_new_2022": false,
+      "evaluation": {
+        "status": null,
+        "compliance_level": null,
+        "applicable": true,
+        "evidence_found": false,
+        "confidence_score": 0,
+        "document_references": [],
+        "findings": { "strengths": [], "gaps": [], "recommendations": [] }
+      }
+    },
+    {
+      "id": "5.3",
+      "category": "Organizational Controls",
+      "control_name": "Segregation of duties",
+      "description": "Conflicting duties and areas of responsibility shall be segregated to reduce opportunities for unauthorized or unintentional modification or misuse of assets",
+      "is_new_2022": false,
+      "evaluation": {
+        "status": null,
+        "compliance_level": null,
+        "applicable": true,
+        "evidence_found": false,
+        "confidence_score": 0,
+        "document_references": [],
+        "findings": { "strengths": [], "gaps": [], "recommendations": [] }
+      }
+    },
+    {
+      "id": "5.4",
+      "category": "Organizational Controls",
+      "control_name": "Management responsibilities",
+      "description": "Management shall require all personnel to apply information security in accordance with established policies and procedures",
+      "is_new_2022": false,
+      "evaluation": {
+        "status": null,
+        "compliance_level": null,
+        "applicable": true,
+        "evidence_found": false,
+        "confidence_score": 0,
+        "document_references": [],
+        "findings": { "strengths": [], "gaps": [], "recommendations": [] }
+      }
+    },
+    {
+      "id": "5.5",
+      "category": "Organizational Controls",
+      "control_name": "Contact with authorities",
+      "description": "Establish and maintain contact with relevant authorities such as law enforcement, regulatory bodies, and emergency services",
+      "is_new_2022": false,
+      "evaluation": {
+        "status": null,
+        "compliance_level": null,
+        "applicable": true,
+        "evidence_found": false,
+        "confidence_score": 0,
+        "document_references": [],
+        "findings": { "strengths": [], "gaps": [], "recommendations": [] }
+      }
+    },
+    {
+      "id": "5.6",
+      "category": "Organizational Controls",
+      "control_name": "Contact with special interest groups",
+      "description": "Establish and maintain contact with special interest groups, security forums, and professional associations",
+      "is_new_2022": false,
+      "evaluation": {
+        "status": null,
+        "compliance_level": null,
+        "applicable": true,
+        "evidence_found": false,
+        "confidence_score": 0,
+        "document_references": [],
+        "findings": { "strengths": [], "gaps": [], "recommendations": [] }
+      }
+    },
+    {
+      "id": "5.7",
+      "category": "Organizational Controls",
+      "control_name": "Threat intelligence",
+      "description": "Collect and analyze information about threats to information security to produce threat intelligence and use it in risk treatment decisions",
+      "is_new_2022": true,
+      "evaluation": {
+        "status": null,
+        "compliance_level": null,
+        "applicable": true,
+        "evidence_found": false,
+        "confidence_score": 0,
+        "document_references": [],
+        "findings": { "strengths": [], "gaps": [], "recommendations": [] }
+      }
+    },
+    {
+      "id": "5.8",
+      "category": "Organizational Controls",
+      "control_name": "Information security in project management",
+      "description": "Information security shall be integrated into project management throughout the organization",
+      "is_new_2022": false,
+      "evaluation": {
+        "status": null,
+        "compliance_level": null,
+        "applicable": true,
+        "evidence_found": false,
+        "confidence_score": 0,
+        "document_references": [],
+        "findings": { "strengths": [], "gaps": [], "recommendations": [] }
+      }
+    },
+    {
+      "id": "5.9",
+      "category": "Organizational Controls",
+      "control_name": "Inventory of information and other associated assets",
+      "description": "Maintain an inventory of information and other associated assets, including owners",
+      "is_new_2022": false,
+      "evaluation": {
+        "status": null,
+        "compliance_level": null,
+        "applicable": true,
+        "evidence_found": false,
+        "confidence_score": 0,
+        "document_references": [],
+        "findings": { "strengths": [], "gaps": [], "recommendations": [] }
+      }
+    },
+    {
+      "id": "5.10",
+      "category": "Organizational Controls",
+      "control_name": "Acceptable use of information and other associated assets",
+      "description": "Rules for acceptable use and procedures for handling information and other associated assets shall be identified, documented, and implemented",
+      "is_new_2022": false,
+      "evaluation": {
+        "status": null,
+        "compliance_level": null,
+        "applicable": true,
+        "evidence_found": false,
+        "confidence_score": 0,
+        "document_references": [],
+        "findings": { "strengths": [], "gaps": [], "recommendations": [] }
+      }
+    },
+    {
+      "id": "5.11",
+      "category": "Organizational Controls",
+      "control_name": "Return of assets",
+      "description": "Personnel and external party users shall return all organizational assets upon termination of employment, contract, or agreement",
+      "is_new_2022": false,
+      "evaluation": {
+        "status": null,
+        "compliance_level": null,
+        "applicable": true,
+        "evidence_found": false,
+        "confidence_score": 0,
+        "document_references": [],
+        "findings": { "strengths": [], "gaps": [], "recommendations": [] }
+      }
+    },
+    {
+      "id": "5.12",
+      "category": "Organizational Controls",
+      "control_name": "Classification of information",
+      "description": "Information shall be classified according to the information security needs of the organization based on confidentiality, integrity, availability, and relevant stakeholder requirements",
+      "is_new_2022": false,
+      "evaluation": {
+        "status": null,
+        "compliance_level": null,
+        "applicable": true,
+        "evidence_found": false,
+        "confidence_score": 0,
+        "document_references": [],
+        "findings": { "strengths": [], "gaps": [], "recommendations": [] }
+      }
+    },
+    {
+      "id": "5.13",
+      "category": "Organizational Controls",
+      "control_name": "Labelling of information",
+      "description": "An appropriate set of procedures for information labelling shall be developed and implemented in accordance with the information classification scheme",
+      "is_new_2022": false,
+      "evaluation": {
+        "status": null,
+        "compliance_level": null,
+        "applicable": true,
+        "evidence_found": false,
+        "confidence_score": 0,
+        "document_references": [],
+        "findings": { "strengths": [], "gaps": [], "recommendations": [] }
+      }
+    },
+    {
+      "id": "5.14",
+      "category": "Organizational Controls",
+      "control_name": "Information transfer",
+      "description": "Information transfer rules, procedures, or agreements shall be in place for all types of transfer within the organization and between the organization and other parties",
+      "is_new_2022": false,
+      "evaluation": {
+        "status": null,
+        "compliance_level": null,
+        "applicable": true,
+        "evidence_found": false,
+        "confidence_score": 0,
+        "document_references": [],
+        "findings": { "strengths": [], "gaps": [], "recommendations": [] }
+      }
+    },
+    {
+      "id": "5.15",
+      "category": "Organizational Controls",
+      "control_name": "Access control",
+      "description": "Rules to control physical and logical access to information and other associated assets shall be established and implemented based on business and information security requirements",
+      "is_new_2022": false,
+      "evaluation": {
+        "status": null,
+        "compliance_level": null,
+        "applicable": true,
+        "evidence_found": false,
+        "confidence_score": 0,
+        "document_references": [],
+        "findings": { "strengths": [], "gaps": [], "recommendations": [] }
+      }
+    },
+    {
+      "id": "5.16",
+      "category": "Organizational Controls",
+      "control_name": "Identity management",
+      "description": "The full lifecycle of identities shall be managed including registration, changes, and de-provisioning of identities",
+      "is_new_2022": false,
+      "evaluation": {
+        "status": null,
+        "compliance_level": null,
+        "applicable": true,
+        "evidence_found": false,
+        "confidence_score": 0,
+        "document_references": [],
+        "findings": { "strengths": [], "gaps": [], "recommendations": [] }
+      }
+    },
+    {
+      "id": "5.17",
+      "category": "Organizational Controls",
+      "control_name": "Authentication information",
+      "description": "Allocation and management of authentication information shall be controlled by a management process, including advising personnel on appropriate handling of authentication information",
+      "is_new_2022": false,
+      "evaluation": {
+        "status": null,
+        "compliance_level": null,
+        "applicable": true,
+        "evidence_found": false,
+        "confidence_score": 0,
+        "document_references": [],
+        "findings": { "strengths": [], "gaps": [], "recommendations": [] }
+      }
+    },
+    {
+      "id": "5.18",
+      "category": "Organizational Controls",
+      "control_name": "Access rights",
+      "description": "Access rights to information and other associated assets shall be provisioned, reviewed, modified, and removed in accordance with the organization's access control policy",
+      "is_new_2022": false,
+      "evaluation": {
+        "status": null,
+        "compliance_level": null,
+        "applicable": true,
+        "evidence_found": false,
+        "confidence_score": 0,
+        "document_references": [],
+        "findings": { "strengths": [], "gaps": [], "recommendations": [] }
+      }
+    },
+    {
+      "id": "5.19",
+      "category": "Organizational Controls",
+      "control_name": "Information security in supplier relationships",
+      "description": "Processes and procedures shall be defined and implemented to manage the information security risks associated with the use of supplier products or services",
+      "is_new_2022": false,
+      "evaluation": {
+        "status": null,
+        "compliance_level": null,
+        "applicable": true,
+        "evidence_found": false,
+        "confidence_score": 0,
+        "document_references": [],
+        "findings": { "strengths": [], "gaps": [], "recommendations": [] }
+      }
+    },
+    {
+      "id": "5.20",
+      "category": "Organizational Controls",
+      "control_name": "Addressing information security within supplier agreements",
+      "description": "Relevant information security requirements shall be established and agreed with each supplier based on the type of supplier relationship",
+      "is_new_2022": false,
+      "evaluation": {
+        "status": null,
+        "compliance_level": null,
+        "applicable": true,
+        "evidence_found": false,
+        "confidence_score": 0,
+        "document_references": [],
+        "findings": { "strengths": [], "gaps": [], "recommendations": [] }
+      }
+    },
+    {
+      "id": "5.21",
+      "category": "Organizational Controls",
+      "control_name": "Managing information security in the ICT supply chain",
+      "description": "Processes and procedures shall be defined and implemented to manage the information security risks associated with the ICT products and services supply chain",
+      "is_new_2022": false,
+      "evaluation": {
+        "status": null,
+        "compliance_level": null,
+        "applicable": true,
+        "evidence_found": false,
+        "confidence_score": 0,
+        "document_references": [],
+        "findings": { "strengths": [], "gaps": [], "recommendations": [] }
+      }
+    },
+    {
+      "id": "5.22",
+      "category": "Organizational Controls",
+      "control_name": "Monitoring, review and change management of supplier services",
+      "description": "The organization shall regularly monitor, review, evaluate, and manage change in supplier information security practices and service delivery",
+      "is_new_2022": false,
+      "evaluation": {
+        "status": null,
+        "compliance_level": null,
+        "applicable": true,
+        "evidence_found": false,
+        "confidence_score": 0,
+        "document_references": [],
+        "findings": { "strengths": [], "gaps": [], "recommendations": [] }
+      }
+    },
+    {
+      "id": "5.23",
+      "category": "Organizational Controls",
+      "control_name": "Information security for use of cloud services",
+      "description": "Processes for acquisition, use, management, and exit from cloud services shall be established in accordance with the organization's information security requirements",
+      "is_new_2022": true,
+      "evaluation": {
+        "status": null,
+        "compliance_level": null,
+        "applicable": true,
+        "evidence_found": false,
+        "confidence_score": 0,
+        "document_references": [],
+        "findings": { "strengths": [], "gaps": [], "recommendations": [] }
+      }
+    },
+    {
+      "id": "5.24",
+      "category": "Organizational Controls",
+      "control_name": "Information security incident management planning and preparation",
+      "description": "The organization shall plan and prepare for managing information security incidents by defining, establishing, and communicating incident management processes, roles, and responsibilities",
+      "is_new_2022": false,
+      "evaluation": {
+        "status": null,
+        "compliance_level": null,
+        "applicable": true,
+        "evidence_found": false,
+        "confidence_score": 0,
+        "document_references": [],
+        "findings": { "strengths": [], "gaps": [], "recommendations": [] }
+      }
+    },
+    {
+      "id": "5.25",
+      "category": "Organizational Controls",
+      "control_name": "Assessment and decision on information security events",
+      "description": "The organization shall assess information security events and decide if they are to be categorized as information security incidents",
+      "is_new_2022": false,
+      "evaluation": {
+        "status": null,
+        "compliance_level": null,
+        "applicable": true,
+        "evidence_found": false,
+        "confidence_score": 0,
+        "document_references": [],
+        "findings": { "strengths": [], "gaps": [], "recommendations": [] }
+      }
+    },
+    {
+      "id": "5.26",
+      "category": "Organizational Controls",
+      "control_name": "Response to information security incidents",
+      "description": "Information security incidents shall be responded to in accordance with documented procedures",
+      "is_new_2022": false,
+      "evaluation": {
+        "status": null,
+        "compliance_level": null,
+        "applicable": true,
+        "evidence_found": false,
+        "confidence_score": 0,
+        "document_references": [],
+        "findings": { "strengths": [], "gaps": [], "recommendations": [] }
+      }
+    },
+    {
+      "id": "5.27",
+      "category": "Organizational Controls",
+      "control_name": "Learning from information security incidents",
+      "description": "Knowledge gained from information security incidents shall be used to strengthen and improve the information security controls",
+      "is_new_2022": false,
+      "evaluation": {
+        "status": null,
+        "compliance_level": null,
+        "applicable": true,
+        "evidence_found": false,
+        "confidence_score": 0,
+        "document_references": [],
+        "findings": { "strengths": [], "gaps": [], "recommendations": [] }
+      }
+    },
+    {
+      "id": "5.28",
+      "category": "Organizational Controls",
+      "control_name": "Collection of evidence",
+      "description": "The organization shall establish and implement procedures for the identification, collection, acquisition, and preservation of evidence related to information security events",
+      "is_new_2022": false,
+      "evaluation": {
+        "status": null,
+        "compliance_level": null,
+        "applicable": true,
+        "evidence_found": false,
+        "confidence_score": 0,
+        "document_references": [],
+        "findings": { "strengths": [], "gaps": [], "recommendations": [] }
+      }
+    },
+    {
+      "id": "5.29",
+      "category": "Organizational Controls",
+      "control_name": "Information security during disruption",
+      "description": "The organization shall plan how to maintain information security at an appropriate level during disruption",
+      "is_new_2022": false,
+      "evaluation": {
+        "status": null,
+        "compliance_level": null,
+        "applicable": true,
+        "evidence_found": false,
+        "confidence_score": 0,
+        "document_references": [],
+        "findings": { "strengths": [], "gaps": [], "recommendations": [] }
+      }
+    },
+    {
+      "id": "5.30",
+      "category": "Organizational Controls",
+      "control_name": "ICT readiness for business continuity",
+      "description": "ICT readiness shall be planned, implemented, maintained, and tested based on business continuity objectives and ICT continuity requirements",
+      "is_new_2022": true,
+      "evaluation": {
+        "status": null,
+        "compliance_level": null,
+        "applicable": true,
+        "evidence_found": false,
+        "confidence_score": 0,
+        "document_references": [],
+        "findings": { "strengths": [], "gaps": [], "recommendations": [] }
+      }
+    },
+    {
+      "id": "5.31",
+      "category": "Organizational Controls",
+      "control_name": "Legal, statutory, regulatory and contractual requirements",
+      "description": "Legal, statutory, regulatory and contractual requirements relevant to information security shall be identified, documented, and kept up to date",
+      "is_new_2022": false,
+      "evaluation": {
+        "status": null,
+        "compliance_level": null,
+        "applicable": true,
+        "evidence_found": false,
+        "confidence_score": 0,
+        "document_references": [],
+        "findings": { "strengths": [], "gaps": [], "recommendations": [] }
+      }
+    },
+    {
+      "id": "5.32",
+      "category": "Organizational Controls",
+      "control_name": "Intellectual property rights",
+      "description": "The organization shall implement appropriate procedures to protect intellectual property rights",
+      "is_new_2022": false,
+      "evaluation": {
+        "status": null,
+        "compliance_level": null,
+        "applicable": true,
+        "evidence_found": false,
+        "confidence_score": 0,
+        "document_references": [],
+        "findings": { "strengths": [], "gaps": [], "recommendations": [] }
+      }
+    },
+    {
+      "id": "5.33",
+      "category": "Organizational Controls",
+      "control_name": "Protection of records",
+      "description": "Records shall be protected from loss, destruction, falsification, unauthorized access, and unauthorized release",
+      "is_new_2022": false,
+      "evaluation": {
+        "status": null,
+        "compliance_level": null,
+        "applicable": true,
+        "evidence_found": false,
+        "confidence_score": 0,
+        "document_references": [],
+        "findings": { "strengths": [], "gaps": [], "recommendations": [] }
+      }
+    },
+    {
+      "id": "5.34",
+      "category": "Organizational Controls",
+      "control_name": "Privacy and protection of personal identifiable information (PII)",
+      "description": "The organization shall identify and meet the requirements regarding the preservation of privacy and protection of PII in accordance with applicable laws, regulations, and contractual requirements",
+      "is_new_2022": false,
+      "evaluation": {
+        "status": null,
+        "compliance_level": null,
+        "applicable": true,
+        "evidence_found": false,
+        "confidence_score": 0,
+        "document_references": [],
+        "findings": { "strengths": [], "gaps": [], "recommendations": [] }
+      }
+    },
+    {
+      "id": "5.35",
+      "category": "Organizational Controls",
+      "control_name": "Independent review of information security",
+      "description": "The organization's approach to managing information security and its implementation shall be reviewed independently at planned intervals or when significant changes occur",
+      "is_new_2022": false,
+      "evaluation": {
+        "status": null,
+        "compliance_level": null,
+        "applicable": true,
+        "evidence_found": false,
+        "confidence_score": 0,
+        "document_references": [],
+        "findings": { "strengths": [], "gaps": [], "recommendations": [] }
+      }
+    },
+    {
+      "id": "5.36",
+      "category": "Organizational Controls",
+      "control_name": "Compliance with policies, rules and standards for information security",
+      "description": "Compliance with the organization's information security policy, topic-specific policies, rules, and standards shall be regularly reviewed",
+      "is_new_2022": false,
+      "evaluation": {
+        "status": null,
+        "compliance_level": null,
+        "applicable": true,
+        "evidence_found": false,
+        "confidence_score": 0,
+        "document_references": [],
+        "findings": { "strengths": [], "gaps": [], "recommendations": [] }
+      }
+    },
+    {
+      "id": "5.37",
+      "category": "Organizational Controls",
+      "control_name": "Documented operating procedures",
+      "description": "Operating procedures for information processing facilities shall be documented and made available to personnel who need them",
+      "is_new_2022": false,
+      "evaluation": {
+        "status": null,
+        "compliance_level": null,
+        "applicable": true,
+        "evidence_found": false,
+        "confidence_score": 0,
+        "document_references": [],
+        "findings": { "strengths": [], "gaps": [], "recommendations": [] }
+      }
+    },
+    {
+      "id": "6.1",
+      "category": "People Controls",
+      "control_name": "Screening",
+      "description": "Background verification checks on all candidates to become personnel shall be carried out prior to joining the organization",
+      "is_new_2022": false,
+      "evaluation": {
+        "status": null,
+        "compliance_level": null,
+        "applicable": true,
+        "evidence_found": false,
+        "confidence_score": 0,
+        "document_references": [],
+        "findings": { "strengths": [], "gaps": [], "recommendations": [] }
+      }
+    },
+    {
+      "id": "6.2",
+      "category": "People Controls",
+      "control_name": "Terms and conditions of employment",
+      "description": "Employment contractual agreements shall state the personnel's and the organization's responsibilities for information security",
+      "is_new_2022": false,
+      "evaluation": {
+        "status": null,
+        "compliance_level": null,
+        "applicable": true,
+        "evidence_found": false,
+        "confidence_score": 0,
+        "document_references": [],
+        "findings": { "strengths": [], "gaps": [], "recommendations": [] }
+      }
+    },
+    {
+      "id": "6.3",
+      "category": "People Controls",
+      "control_name": "Information security awareness, education and training",
+      "description": "Personnel and relevant interested parties shall receive appropriate information security awareness, education, and training with regular updates",
+      "is_new_2022": false,
+      "evaluation": {
+        "status": null,
+        "compliance_level": null,
+        "applicable": true,
+        "evidence_found": false,
+        "confidence_score": 0,
+        "document_references": [],
+        "findings": { "strengths": [], "gaps": [], "recommendations": [] }
+      }
+    },
+    {
+      "id": "6.4",
+      "category": "People Controls",
+      "control_name": "Disciplinary process",
+      "description": "A disciplinary process shall be formalized and communicated to take actions against personnel and other relevant interested parties who have committed an information security policy violation",
+      "is_new_2022": false,
+      "evaluation": {
+        "status": null,
+        "compliance_level": null,
+        "applicable": true,
+        "evidence_found": false,
+        "confidence_score": 0,
+        "document_references": [],
+        "findings": { "strengths": [], "gaps": [], "recommendations": [] }
+      }
+    },
+    {
+      "id": "6.5",
+      "category": "People Controls",
+      "control_name": "Responsibilities after termination or change of employment",
+      "description": "Information security responsibilities and duties that remain valid after termination or change of employment shall be defined, enforced, and communicated",
+      "is_new_2022": false,
+      "evaluation": {
+        "status": null,
+        "compliance_level": null,
+        "applicable": true,
+        "evidence_found": false,
+        "confidence_score": 0,
+        "document_references": [],
+        "findings": { "strengths": [], "gaps": [], "recommendations": [] }
+      }
+    },
+    {
+      "id": "6.6",
+      "category": "People Controls",
+      "control_name": "Confidentiality or non-disclosure agreements",
+      "description": "Confidentiality or non-disclosure agreements reflecting the organization's needs for the protection of information shall be identified, documented, regularly reviewed, and signed by personnel",
+      "is_new_2022": false,
+      "evaluation": {
+        "status": null,
+        "compliance_level": null,
+        "applicable": true,
+        "evidence_found": false,
+        "confidence_score": 0,
+        "document_references": [],
+        "findings": { "strengths": [], "gaps": [], "recommendations": [] }
+      }
+    },
+    {
+      "id": "6.7",
+      "category": "People Controls",
+      "control_name": "Remote working",
+      "description": "Security measures shall be implemented when personnel are working remotely to protect information accessed, processed, or stored outside the organization's premises",
+      "is_new_2022": false,
+      "evaluation": {
+        "status": null,
+        "compliance_level": null,
+        "applicable": true,
+        "evidence_found": false,
+        "confidence_score": 0,
+        "document_references": [],
+        "findings": { "strengths": [], "gaps": [], "recommendations": [] }
+      }
+    },
+    {
+      "id": "6.8",
+      "category": "People Controls",
+      "control_name": "Information security event reporting",
+      "description": "The organization shall provide a mechanism for personnel to report observed or suspected information security events through appropriate channels in a timely manner",
+      "is_new_2022": false,
+      "evaluation": {
+        "status": null,
+        "compliance_level": null,
+        "applicable": true,
+        "evidence_found": false,
+        "confidence_score": 0,
+        "document_references": [],
+        "findings": { "strengths": [], "gaps": [], "recommendations": [] }
+      }
+    },
+    {
+      "id": "7.1",
+      "category": "Physical Controls",
+      "control_name": "Physical security perimeters",
+      "description": "Security perimeters shall be defined and used to protect areas that contain information and other associated assets",
+      "is_new_2022": false,
+      "evaluation": {
+        "status": null,
+        "compliance_level": null,
+        "applicable": true,
+        "evidence_found": false,
+        "confidence_score": 0,
+        "document_references": [],
+        "findings": { "strengths": [], "gaps": [], "recommendations": [] }
+      }
+    },
+    {
+      "id": "7.2",
+      "category": "Physical Controls",
+      "control_name": "Physical entry",
+      "description": "Secure areas shall be protected by appropriate entry controls to ensure only authorized personnel are allowed access",
+      "is_new_2022": false,
+      "evaluation": {
+        "status": null,
+        "compliance_level": null,
+        "applicable": true,
+        "evidence_found": false,
+        "confidence_score": 0,
+        "document_references": [],
+        "findings": { "strengths": [], "gaps": [], "recommendations": [] }
+      }
+    },
+    {
+      "id": "7.3",
+      "category": "Physical Controls",
+      "control_name": "Securing offices, rooms and facilities",
+      "description": "Physical security for offices, rooms, and facilities shall be designed and implemented",
+      "is_new_2022": false,
+      "evaluation": {
+        "status": null,
+        "compliance_level": null,
+        "applicable": true,
+        "evidence_found": false,
+        "confidence_score": 0,
+        "document_references": [],
+        "findings": { "strengths": [], "gaps": [], "recommendations": [] }
+      }
+    },
+    {
+      "id": "7.4",
+      "category": "Physical Controls",
+      "control_name": "Physical security monitoring",
+      "description": "Premises shall be continuously monitored for unauthorized physical access",
+      "is_new_2022": true,
+      "evaluation": {
+        "status": null,
+        "compliance_level": null,
+        "applicable": true,
+        "evidence_found": false,
+        "confidence_score": 0,
+        "document_references": [],
+        "findings": { "strengths": [], "gaps": [], "recommendations": [] }
+      }
+    },
+    {
+      "id": "7.5",
+      "category": "Physical Controls",
+      "control_name": "Protecting against physical and environmental threats",
+      "description": "Protection against physical and environmental threats, such as natural disasters and other intentional or unintentional physical threats to infrastructure shall be designed and implemented",
+      "is_new_2022": false,
+      "evaluation": {
+        "status": null,
+        "compliance_level": null,
+        "applicable": true,
+        "evidence_found": false,
+        "confidence_score": 0,
+        "document_references": [],
+        "findings": { "strengths": [], "gaps": [], "recommendations": [] }
+      }
+    },
+    {
+      "id": "7.6",
+      "category": "Physical Controls",
+      "control_name": "Working in secure areas",
+      "description": "Security measures for working in secure areas shall be designed and implemented",
+      "is_new_2022": false,
+      "evaluation": {
+        "status": null,
+        "compliance_level": null,
+        "applicable": true,
+        "evidence_found": false,
+        "confidence_score": 0,
+        "document_references": [],
+        "findings": { "strengths": [], "gaps": [], "recommendations": [] }
+      }
+    },
+    {
+      "id": "7.7",
+      "category": "Physical Controls",
+      "control_name": "Clear desk and clear screen",
+      "description": "Clear desk rules for papers and removable storage media and clear screen rules for information processing facilities shall be defined and appropriately enforced",
+      "is_new_2022": false,
+      "evaluation": {
+        "status": null,
+        "compliance_level": null,
+        "applicable": true,
+        "evidence_found": false,
+        "confidence_score": 0,
+        "document_references": [],
+        "findings": { "strengths": [], "gaps": [], "recommendations": [] }
+      }
+    },
+    {
+      "id": "7.8",
+      "category": "Physical Controls",
+      "control_name": "Equipment siting and protection",
+      "description": "Equipment shall be sited securely and protected to reduce the risks from physical and environmental threats and from unauthorized access",
+      "is_new_2022": false,
+      "evaluation": {
+        "status": null,
+        "compliance_level": null,
+        "applicable": true,
+        "evidence_found": false,
+        "confidence_score": 0,
+        "document_references": [],
+        "findings": { "strengths": [], "gaps": [], "recommendations": [] }
+      }
+    },
+    {
+      "id": "7.9",
+      "category": "Physical Controls",
+      "control_name": "Security of assets off-premises",
+      "description": "Off-site assets shall be protected taking into account the different risks of working outside the organization's premises",
+      "is_new_2022": false,
+      "evaluation": {
+        "status": null,
+        "compliance_level": null,
+        "applicable": true,
+        "evidence_found": false,
+        "confidence_score": 0,
+        "document_references": [],
+        "findings": { "strengths": [], "gaps": [], "recommendations": [] }
+      }
+    },
+    {
+      "id": "7.10",
+      "category": "Physical Controls",
+      "control_name": "Storage media",
+      "description": "Storage media shall be managed through their lifecycle of acquisition, use, transportation, and disposal in accordance with the organization's classification scheme and handling requirements",
+      "is_new_2022": false,
+      "evaluation": {
+        "status": null,
+        "compliance_level": null,
+        "applicable": true,
+        "evidence_found": false,
+        "confidence_score": 0,
+        "document_references": [],
+        "findings": { "strengths": [], "gaps": [], "recommendations": [] }
+      }
+    },
+    {
+      "id": "7.11",
+      "category": "Physical Controls",
+      "control_name": "Supporting utilities",
+      "description": "Information processing facilities shall be protected from power failures and other disruptions caused by failures in supporting utilities",
+      "is_new_2022": false,
+      "evaluation": {
+        "status": null,
+        "compliance_level": null,
+        "applicable": true,
+        "evidence_found": false,
+        "confidence_score": 0,
+        "document_references": [],
+        "findings": { "strengths": [], "gaps": [], "recommendations": [] }
+      }
+    },
+    {
+      "id": "7.12",
+      "category": "Physical Controls",
+      "control_name": "Cabling security",
+      "description": "Cables carrying power, data or supporting information services shall be protected from interception, interference, or damage",
+      "is_new_2022": false,
+      "evaluation": {
+        "status": null,
+        "compliance_level": null,
+        "applicable": true,
+        "evidence_found": false,
+        "confidence_score": 0,
+        "document_references": [],
+        "findings": { "strengths": [], "gaps": [], "recommendations": [] }
+      }
+    },
+    {
+      "id": "7.13",
+      "category": "Physical Controls",
+      "control_name": "Equipment maintenance",
+      "description": "Equipment shall be maintained correctly to ensure availability, integrity, and confidentiality of information",
+      "is_new_2022": false,
+      "evaluation": {
+        "status": null,
+        "compliance_level": null,
+        "applicable": true,
+        "evidence_found": false,
+        "confidence_score": 0,
+        "document_references": [],
+        "findings": { "strengths": [], "gaps": [], "recommendations": [] }
+      }
+    },
+    {
+      "id": "7.14",
+      "category": "Physical Controls",
+      "control_name": "Secure disposal or re-use of equipment",
+      "description": "Items of equipment containing storage media shall be verified to ensure that any sensitive data and licensed software has been removed or securely overwritten prior to disposal or re-use",
+      "is_new_2022": false,
+      "evaluation": {
+        "status": null,
+        "compliance_level": null,
+        "applicable": true,
+        "evidence_found": false,
+        "confidence_score": 0,
+        "document_references": [],
+        "findings": { "strengths": [], "gaps": [], "recommendations": [] }
+      }
+    },
+    {
+      "id": "8.1",
+      "category": "Technological Controls",
+      "control_name": "User end point devices",
+      "description": "Information stored on, processed by, or accessible via user end point devices shall be protected",
+      "is_new_2022": false,
+      "evaluation": {
+        "status": null,
+        "compliance_level": null,
+        "applicable": true,
+        "evidence_found": false,
+        "confidence_score": 0,
+        "document_references": [],
+        "findings": { "strengths": [], "gaps": [], "recommendations": [] }
+      }
+    },
+    {
+      "id": "8.2",
+      "category": "Technological Controls",
+      "control_name": "Privileged access rights",
+      "description": "The allocation and use of privileged access rights shall be restricted and managed",
+      "is_new_2022": false,
+      "evaluation": {
+        "status": null,
+        "compliance_level": null,
+        "applicable": true,
+        "evidence_found": false,
+        "confidence_score": 0,
+        "document_references": [],
+        "findings": { "strengths": [], "gaps": [], "recommendations": [] }
+      }
+    },
+    {
+      "id": "8.3",
+      "category": "Technological Controls",
+      "control_name": "Information access restriction",
+      "description": "Access to information and other associated assets shall be restricted in accordance with the established access control policy",
+      "is_new_2022": false,
+      "evaluation": {
+        "status": null,
+        "compliance_level": null,
+        "applicable": true,
+        "evidence_found": false,
+        "confidence_score": 0,
+        "document_references": [],
+        "findings": { "strengths": [], "gaps": [], "recommendations": [] }
+      }
+    },
+    {
+      "id": "8.4",
+      "category": "Technological Controls",
+      "control_name": "Access to source code",
+      "description": "Read and write access to source code, development tools, and software libraries shall be appropriately managed",
+      "is_new_2022": false,
+      "evaluation": {
+        "status": null,
+        "compliance_level": null,
+        "applicable": true,
+        "evidence_found": false,
+        "confidence_score": 0,
+        "document_references": [],
+        "findings": { "strengths": [], "gaps": [], "recommendations": [] }
+      }
+    },
+    {
+      "id": "8.5",
+      "category": "Technological Controls",
+      "control_name": "Secure authentication",
+      "description": "Secure authentication technologies and procedures shall be implemented based on information access restrictions and the access control policy",
+      "is_new_2022": false,
+      "evaluation": {
+        "status": null,
+        "compliance_level": null,
+        "applicable": true,
+        "evidence_found": false,
+        "confidence_score": 0,
+        "document_references": [],
+        "findings": { "strengths": [], "gaps": [], "recommendations": [] }
+      }
+    },
+    {
+      "id": "8.6",
+      "category": "Technological Controls",
+      "control_name": "Capacity management",
+      "description": "The use of resources shall be monitored and adjusted in line with current and expected capacity requirements",
+      "is_new_2022": false,
+      "evaluation": {
+        "status": null,
+        "compliance_level": null,
+        "applicable": true,
+        "evidence_found": false,
+        "confidence_score": 0,
+        "document_references": [],
+        "findings": { "strengths": [], "gaps": [], "recommendations": [] }
+      }
+    },
+    {
+      "id": "8.7",
+      "category": "Technological Controls",
+      "control_name": "Protection against malware",
+      "description": "Protection against malware shall be implemented and supported by appropriate user awareness",
+      "is_new_2022": false,
+      "evaluation": {
+        "status": null,
+        "compliance_level": null,
+        "applicable": true,
+        "evidence_found": false,
+        "confidence_score": 0,
+        "document_references": [],
+        "findings": { "strengths": [], "gaps": [], "recommendations": [] }
+      }
+    },
+    {
+      "id": "8.8",
+      "category": "Technological Controls",
+      "control_name": "Management of technical vulnerabilities",
+      "description": "Information about technical vulnerabilities of information systems in use shall be obtained, the organization's exposure to such vulnerabilities evaluated, and appropriate measures taken",
+      "is_new_2022": false,
+      "evaluation": {
+        "status": null,
+        "compliance_level": null,
+        "applicable": true,
+        "evidence_found": false,
+        "confidence_score": 0,
+        "document_references": [],
+        "findings": { "strengths": [], "gaps": [], "recommendations": [] }
+      }
+    },
+    {
+      "id": "8.9",
+      "category": "Technological Controls",
+      "control_name": "Configuration management",
+      "description": "Configurations, including security configurations, of hardware, software, services, and networks shall be established, documented, implemented, monitored, and reviewed",
+      "is_new_2022": true,
+      "evaluation": {
+        "status": null,
+        "compliance_level": null,
+        "applicable": true,
+        "evidence_found": false,
+        "confidence_score": 0,
+        "document_references": [],
+        "findings": { "strengths": [], "gaps": [], "recommendations": [] }
+      }
+    },
+    {
+      "id": "8.10",
+      "category": "Technological Controls",
+      "control_name": "Information deletion",
+      "description": "Information stored in information systems, devices, or in any other storage media shall be deleted when no longer required",
+      "is_new_2022": true,
+      "evaluation": {
+        "status": null,
+        "compliance_level": null,
+        "applicable": true,
+        "evidence_found": false,
+        "confidence_score": 0,
+        "document_references": [],
+        "findings": { "strengths": [], "gaps": [], "recommendations": [] }
+      }
+    },
+    {
+      "id": "8.11",
+      "category": "Technological Controls",
+      "control_name": "Data masking",
+      "description": "Data masking shall be used in accordance with the organization's topic-specific policy on access control and other related topic-specific policies, and business requirements",
+      "is_new_2022": true,
+      "evaluation": {
+        "status": null,
+        "compliance_level": null,
+        "applicable": true,
+        "evidence_found": false,
+        "confidence_score": 0,
+        "document_references": [],
+        "findings": { "strengths": [], "gaps": [], "recommendations": [] }
+      }
+    },
+    {
+      "id": "8.12",
+      "category": "Technological Controls",
+      "control_name": "Data leakage prevention",
+      "description": "Data leakage prevention measures shall be applied to systems, networks, and any other devices that process, store, or transmit sensitive information",
+      "is_new_2022": true,
+      "evaluation": {
+        "status": null,
+        "compliance_level": null,
+        "applicable": true,
+        "evidence_found": false,
+        "confidence_score": 0,
+        "document_references": [],
+        "findings": { "strengths": [], "gaps": [], "recommendations": [] }
+      }
+    },
+    {
+      "id": "8.13",
+      "category": "Technological Controls",
+      "control_name": "Information backup",
+      "description": "Backup copies of information, software, and systems shall be maintained and regularly tested in accordance with the agreed backup policy",
+      "is_new_2022": false,
+      "evaluation": {
+        "status": null,
+        "compliance_level": null,
+        "applicable": true,
+        "evidence_found": false,
+        "confidence_score": 0,
+        "document_references": [],
+        "findings": { "strengths": [], "gaps": [], "recommendations": [] }
+      }
+    },
+    {
+      "id": "8.14",
+      "category": "Technological Controls",
+      "control_name": "Redundancy of information processing facilities",
+      "description": "Information processing facilities shall be implemented with redundancy sufficient to meet availability requirements",
+      "is_new_2022": false,
+      "evaluation": {
+        "status": null,
+        "compliance_level": null,
+        "applicable": true,
+        "evidence_found": false,
+        "confidence_score": 0,
+        "document_references": [],
+        "findings": { "strengths": [], "gaps": [], "recommendations": [] }
+      }
+    },
+    {
+      "id": "8.15",
+      "category": "Technological Controls",
+      "control_name": "Logging",
+      "description": "Logs that record activities, exceptions, faults, and other relevant events shall be produced, stored, protected, and analyzed",
+      "is_new_2022": false,
+      "evaluation": {
+        "status": null,
+        "compliance_level": null,
+        "applicable": true,
+        "evidence_found": false,
+        "confidence_score": 0,
+        "document_references": [],
+        "findings": { "strengths": [], "gaps": [], "recommendations": [] }
+      }
+    },
+    {
+      "id": "8.16",
+      "category": "Technological Controls",
+      "control_name": "Monitoring activities",
+      "description": "Networks, systems, and applications shall be monitored for anomalous behavior and appropriate actions taken to evaluate potential information security incidents",
+      "is_new_2022": true,
+      "evaluation": {
+        "status": null,
+        "compliance_level": null,
+        "applicable": true,
+        "evidence_found": false,
+        "confidence_score": 0,
+        "document_references": [],
+        "findings": { "strengths": [], "gaps": [], "recommendations": [] }
+      }
+    },
+    {
+      "id": "8.17",
+      "category": "Technological Controls",
+      "control_name": "Clock synchronization",
+      "description": "The clocks of information processing systems used by the organization shall be synchronized to approved time sources",
+      "is_new_2022": false,
+      "evaluation": {
+        "status": null,
+        "compliance_level": null,
+        "applicable": true,
+        "evidence_found": false,
+        "confidence_score": 0,
+        "document_references": [],
+        "findings": { "strengths": [], "gaps": [], "recommendations": [] }
+      }
+    },
+    {
+      "id": "8.18",
+      "category": "Technological Controls",
+      "control_name": "Use of privileged utility programs",
+      "description": "The use of utility programs that might be capable of overriding system and application controls shall be restricted and tightly controlled",
+      "is_new_2022": false,
+      "evaluation": {
+        "status": null,
+        "compliance_level": null,
+        "applicable": true,
+        "evidence_found": false,
+        "confidence_score": 0,
+        "document_references": [],
+        "findings": { "strengths": [], "gaps": [], "recommendations": [] }
+      }
+    },
+    {
+      "id": "8.19",
+      "category": "Technological Controls",
+      "control_name": "Installation of software on operational systems",
+      "description": "Procedures and measures shall be implemented to securely manage software installation on operational systems",
+      "is_new_2022": false,
+      "evaluation": {
+        "status": null,
+        "compliance_level": null,
+        "applicable": true,
+        "evidence_found": false,
+        "confidence_score": 0,
+        "document_references": [],
+        "findings": { "strengths": [], "gaps": [], "recommendations": [] }
+      }
+    },
+    {
+      "id": "8.20",
+      "category": "Technological Controls",
+      "control_name": "Networks security",
+      "description": "Networks and network devices shall be secured, managed, and controlled to protect information in systems and applications",
+      "is_new_2022": false,
+      "evaluation": {
+        "status": null,
+        "compliance_level": null,
+        "applicable": true,
+        "evidence_found": false,
+        "confidence_score": 0,
+        "document_references": [],
+        "findings": { "strengths": [], "gaps": [], "recommendations": [] }
+      }
+    },
+    {
+      "id": "8.21",
+      "category": "Technological Controls",
+      "control_name": "Security of network services",
+      "description": "Security mechanisms, service levels, and service requirements of all network services shall be identified, implemented, and monitored",
+      "is_new_2022": false,
+      "evaluation": {
+        "status": null,
+        "compliance_level": null,
+        "applicable": true,
+        "evidence_found": false,
+        "confidence_score": 0,
+        "document_references": [],
+        "findings": { "strengths": [], "gaps": [], "recommendations": [] }
+      }
+    },
+    {
+      "id": "8.22",
+      "category": "Technological Controls",
+      "control_name": "Segregation of networks",
+      "description": "Groups of information services, users, and information systems shall be segregated in the organization's networks",
+      "is_new_2022": false,
+      "evaluation": {
+        "status": null,
+        "compliance_level": null,
+        "applicable": true,
+        "evidence_found": false,
+        "confidence_score": 0,
+        "document_references": [],
+        "findings": { "strengths": [], "gaps": [], "recommendations": [] }
+      }
+    },
+    {
+      "id": "8.23",
+      "category": "Technological Controls",
+      "control_name": "Web filtering",
+      "description": "Access to external websites shall be managed to reduce exposure to malicious content",
+      "is_new_2022": true,
+      "evaluation": {
+        "status": null,
+        "compliance_level": null,
+        "applicable": true,
+        "evidence_found": false,
+        "confidence_score": 0,
+        "document_references": [],
+        "findings": { "strengths": [], "gaps": [], "recommendations": [] }
+      }
+    },
+    {
+      "id": "8.24",
+      "category": "Technological Controls",
+      "control_name": "Use of cryptography",
+      "description": "Rules for the effective use of cryptography, including cryptographic key management, shall be defined and implemented",
+      "is_new_2022": false,
+      "evaluation": {
+        "status": null,
+        "compliance_level": null,
+        "applicable": true,
+        "evidence_found": false,
+        "confidence_score": 0,
+        "document_references": [],
+        "findings": { "strengths": [], "gaps": [], "recommendations": [] }
+      }
+    },
+    {
+      "id": "8.25",
+      "category": "Technological Controls",
+      "control_name": "Secure development life cycle",
+      "description": "Rules for the secure development of software and systems shall be established and applied to developments within the organization",
+      "is_new_2022": false,
+      "evaluation": {
+        "status": null,
+        "compliance_level": null,
+        "applicable": true,
+        "evidence_found": false,
+        "confidence_score": 0,
+        "document_references": [],
+        "findings": { "strengths": [], "gaps": [], "recommendations": [] }
+      }
+    },
+    {
+      "id": "8.26",
+      "category": "Technological Controls",
+      "control_name": "Application security requirements",
+      "description": "Information security requirements shall be identified, specified, and approved when developing or acquiring applications",
+      "is_new_2022": false,
+      "evaluation": {
+        "status": null,
+        "compliance_level": null,
+        "applicable": true,
+        "evidence_found": false,
+        "confidence_score": 0,
+        "document_references": [],
+        "findings": { "strengths": [], "gaps": [], "recommendations": [] }
+      }
+    },
+    {
+      "id": "8.27",
+      "category": "Technological Controls",
+      "control_name": "Secure system architecture and engineering principles",
+      "description": "Principles for engineering secure systems shall be established, documented, maintained, and applied to any information system development activities",
+      "is_new_2022": false,
+      "evaluation": {
+        "status": null,
+        "compliance_level": null,
+        "applicable": true,
+        "evidence_found": false,
+        "confidence_score": 0,
+        "document_references": [],
+        "findings": { "strengths": [], "gaps": [], "recommendations": [] }
+      }
+    },
+    {
+      "id": "8.28",
+      "category": "Technological Controls",
+      "control_name": "Secure coding",
+      "description": "Secure coding principles shall be applied to software development",
+      "is_new_2022": true,
+      "evaluation": {
+        "status": null,
+        "compliance_level": null,
+        "applicable": true,
+        "evidence_found": false,
+        "confidence_score": 0,
+        "document_references": [],
+        "findings": { "strengths": [], "gaps": [], "recommendations": [] }
+      }
+    },
+    {
+      "id": "8.29",
+      "category": "Technological Controls",
+      "control_name": "Security testing in development and acceptance",
+      "description": "Security testing processes shall be defined and implemented in the development lifecycle",
+      "is_new_2022": false,
+      "evaluation": {
+        "status": null,
+        "compliance_level": null,
+        "applicable": true,
+        "evidence_found": false,
+        "confidence_score": 0,
+        "document_references": [],
+        "findings": { "strengths": [], "gaps": [], "recommendations": [] }
+      }
+    },
+    {
+      "id": "8.30",
+      "category": "Technological Controls",
+      "control_name": "Outsourced development",
+      "description": "The organization shall direct, monitor, and review the activities related to outsourced system development",
+      "is_new_2022": false,
+      "evaluation": {
+        "status": null,
+        "compliance_level": null,
+        "applicable": true,
+        "evidence_found": false,
+        "confidence_score": 0,
+        "document_references": [],
+        "findings": { "strengths": [], "gaps": [], "recommendations": [] }
+      }
+    },
+    {
+      "id": "8.31",
+      "category": "Technological Controls",
+      "control_name": "Separation of development, test and production environments",
+      "description": "Development, testing, and production environments shall be separated and secured",
+      "is_new_2022": false,
+      "evaluation": {
+        "status": null,
+        "compliance_level": null,
+        "applicable": true,
+        "evidence_found": false,
+        "confidence_score": 0,
+        "document_references": [],
+        "findings": { "strengths": [], "gaps": [], "recommendations": [] }
+      }
+    },
+    {
+      "id": "8.32",
+      "category": "Technological Controls",
+      "control_name": "Change management",
+      "description": "Changes to information processing facilities and information systems shall be subject to change management procedures",
+      "is_new_2022": false,
+      "evaluation": {
+        "status": null,
+        "compliance_level": null,
+        "applicable": true,
+        "evidence_found": false,
+        "confidence_score": 0,
+        "document_references": [],
+        "findings": { "strengths": [], "gaps": [], "recommendations": [] }
+      }
+    },
+    {
+      "id": "8.33",
+      "category": "Technological Controls",
+      "control_name": "Test information",
+      "description": "Test information shall be appropriately selected, protected, and managed",
+      "is_new_2022": false,
+      "evaluation": {
+        "status": null,
+        "compliance_level": null,
+        "applicable": true,
+        "evidence_found": false,
+        "confidence_score": 0,
+        "document_references": [],
+        "findings": { "strengths": [], "gaps": [], "recommendations": [] }
+      }
+    },
+    {
+      "id": "8.34",
+      "category": "Technological Controls",
+      "control_name": "Protection of information systems during audit testing",
+      "description": "Audit tests and other assurance activities involving assessment of operational systems shall be planned and agreed between the tester and appropriate management",
+      "is_new_2022": false,
+      "evaluation": {
+        "status": null,
+        "compliance_level": null,
+        "applicable": true,
+        "evidence_found": false,
+        "confidence_score": 0,
+        "document_references": [],
+        "findings": { "strengths": [], "gaps": [], "recommendations": [] }
+      }
+    }
+  ],
+  "report_summary": {
+    "total_controls": 93,
+    "controls_by_category": {
+      "Organizational Controls": 37,
+      "People Controls": 8,
+      "Physical Controls": 14,
+      "Technological Controls": 34
+    },
+    "new_controls_2022": 11,
+    "assessment_metrics": {
+      "total_evaluated": 0,
+      "compliant": 0,
+      "partially_compliant": 0,
+      "non_compliant": 0,
+      "not_applicable": 0,
+      "overall_compliance_percentage": 0,
+      "average_confidence_score": 0,
+      "controls_with_gaps": 0
+    },
+    "category_summary": {
+      "Organizational Controls": {
+        "compliant": 0,
+        "partially_compliant": 0,
+        "non_compliant": 0,
+        "compliance_percentage": 0
+      },
+      "People Controls": {
+        "compliant": 0,
+        "partially_compliant": 0,
+        "non_compliant": 0,
+        "compliance_percentage": 0
+      },
+      "Physical Controls": {
+        "compliant": 0,
+        "partially_compliant": 0,
+        "non_compliant": 0,
+        "compliance_percentage": 0
+      },
+      "Technological Controls": {
+        "compliant": 0,
+        "partially_compliant": 0,
+        "non_compliant": 0,
+        "compliance_percentage": 0
+      }
+    }
+  }
+}

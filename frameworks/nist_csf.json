@@ -1,0 +1,1243 @@
+{
+  "framework": {
+    "name": "NIST Cybersecurity Framework (CSF) 2.0",
+    "version": "2.0",
+    "publication_date": "February 26, 2024",
+    "source": "NIST CSWP 29",
+    "source_url": "https://doi.org/10.6028/NIST.CSWP.29",
+    "total_functions": 6,
+    "total_categories": 22,
+    "total_subcategories": 106,
+    "assessment_date": null,
+    "report_period": {
+      "start_date": null,
+      "end_date": null
+    },
+    "tiers": {
+      "Tier 1": "Partial — Ad hoc, reactive cybersecurity risk management",
+      "Tier 2": "Risk Informed — Risk-aware but not organization-wide policy",
+      "Tier 3": "Repeatable — Formally approved, policy-driven practices",
+      "Tier 4": "Adaptive — Continuously improving, risk-informed culture"
+    }
+  },
+  "functions": [
+    {
+      "id": "GV",
+      "name": "GOVERN",
+      "description": "The organization's cybersecurity risk management strategy, expectations, and policy are established, communicated, and monitored",
+      "color_hex": "#7B2D8B",
+      "category_count": 6,
+      "subcategory_count": 31,
+      "categories": [
+        {
+          "id": "GV.OC",
+          "name": "Organizational Context",
+          "description": "The circumstances — mission, stakeholder expectations, dependencies, and legal, regulatory, and contractual requirements — surrounding the organization's cybersecurity risk management decisions are understood",
+          "subcategories": [
+            {
+              "id": "GV.OC-01",
+              "statement": "The organizational mission is understood and informs cybersecurity risk management",
+              "evaluation": {
+                "status": null,
+                "tier_current": null,
+                "tier_target": null,
+                "evidence_found": false,
+                "confidence_score": 0,
+                "document_references": [],
+                "findings": { "strengths": [], "gaps": [], "recommendations": [] }
+              }
+            },
+            {
+              "id": "GV.OC-02",
+              "statement": "Internal and external stakeholders are understood, and their needs and expectations regarding cybersecurity risk management are understood and considered",
+              "evaluation": {
+                "status": null,
+                "tier_current": null,
+                "tier_target": null,
+                "evidence_found": false,
+                "confidence_score": 0,
+                "document_references": [],
+                "findings": { "strengths": [], "gaps": [], "recommendations": [] }
+              }
+            },
+            {
+              "id": "GV.OC-03",
+              "statement": "Legal, regulatory, and contractual requirements regarding cybersecurity — including privacy and civil liberties obligations — are understood and managed",
+              "evaluation": {
+                "status": null,
+                "tier_current": null,
+                "tier_target": null,
+                "evidence_found": false,
+                "confidence_score": 0,
+                "document_references": [],
+                "findings": { "strengths": [], "gaps": [], "recommendations": [] }
+              }
+            },
+            {
+              "id": "GV.OC-04",
+              "statement": "Critical objectives, capabilities, and services that external stakeholders depend on or expect from the organization are understood and communicated",
+              "evaluation": {
+                "status": null,
+                "tier_current": null,
+                "tier_target": null,
+                "evidence_found": false,
+                "confidence_score": 0,
+                "document_references": [],
+                "findings": { "strengths": [], "gaps": [], "recommendations": [] }
+              }
+            },
+            {
+              "id": "GV.OC-05",
+              "statement": "Outcomes, capabilities, and services that the organization depends on are understood and communicated",
+              "evaluation": {
+                "status": null,
+                "tier_current": null,
+                "tier_target": null,
+                "evidence_found": false,
+                "confidence_score": 0,
+                "document_references": [],
+                "findings": { "strengths": [], "gaps": [], "recommendations": [] }
+              }
+            }
+          ]
+        },
+        {
+          "id": "GV.RM",
+          "name": "Risk Management Strategy",
+          "description": "The organization's priorities, constraints, risk tolerance and appetite statements, and assumptions are established, communicated, and used to support operational risk decisions",
+          "subcategories": [
+            {
+              "id": "GV.RM-01",
+              "statement": "Risk management objectives are established and agreed to by organizational stakeholders",
+              "evaluation": {
+                "status": null, "tier_current": null, "tier_target": null,
+                "evidence_found": false, "confidence_score": 0, "document_references": [],
+                "findings": { "strengths": [], "gaps": [], "recommendations": [] }
+              }
+            },
+            {
+              "id": "GV.RM-02",
+              "statement": "Risk appetite and risk tolerance statements are established, communicated, and maintained",
+              "evaluation": {
+                "status": null, "tier_current": null, "tier_target": null,
+                "evidence_found": false, "confidence_score": 0, "document_references": [],
+                "findings": { "strengths": [], "gaps": [], "recommendations": [] }
+              }
+            },
+            {
+              "id": "GV.RM-03",
+              "statement": "Cybersecurity risk management activities and outcomes are included in enterprise risk management processes",
+              "evaluation": {
+                "status": null, "tier_current": null, "tier_target": null,
+                "evidence_found": false, "confidence_score": 0, "document_references": [],
+                "findings": { "strengths": [], "gaps": [], "recommendations": [] }
+              }
+            },
+            {
+              "id": "GV.RM-04",
+              "statement": "Strategic direction that describes appropriate risk response options is established and communicated",
+              "evaluation": {
+                "status": null, "tier_current": null, "tier_target": null,
+                "evidence_found": false, "confidence_score": 0, "document_references": [],
+                "findings": { "strengths": [], "gaps": [], "recommendations": [] }
+              }
+            },
+            {
+              "id": "GV.RM-05",
+              "statement": "Lines of communication across the organization are established for cybersecurity risks, including risks from suppliers and other third parties",
+              "evaluation": {
+                "status": null, "tier_current": null, "tier_target": null,
+                "evidence_found": false, "confidence_score": 0, "document_references": [],
+                "findings": { "strengths": [], "gaps": [], "recommendations": [] }
+              }
+            },
+            {
+              "id": "GV.RM-06",
+              "statement": "A standardized method for calculating, documenting, categorizing, and prioritizing cybersecurity risks is established and communicated",
+              "evaluation": {
+                "status": null, "tier_current": null, "tier_target": null,
+                "evidence_found": false, "confidence_score": 0, "document_references": [],
+                "findings": { "strengths": [], "gaps": [], "recommendations": [] }
+              }
+            },
+            {
+              "id": "GV.RM-07",
+              "statement": "Strategic opportunities (i.e., positive risks) are characterized and are included in organizational cybersecurity risk discussions",
+              "evaluation": {
+                "status": null, "tier_current": null, "tier_target": null,
+                "evidence_found": false, "confidence_score": 0, "document_references": [],
+                "findings": { "strengths": [], "gaps": [], "recommendations": [] }
+              }
+            }
+          ]
+        },
+        {
+          "id": "GV.RR",
+          "name": "Roles, Responsibilities, and Authorities",
+          "description": "Cybersecurity roles, responsibilities, and authorities to foster accountability, performance assessment, and continuous improvement are established and communicated",
+          "subcategories": [
+            {
+              "id": "GV.RR-01",
+              "statement": "Organizational leadership is responsible and accountable for cybersecurity risk and fosters a culture that is risk-aware, ethical, and continually improving",
+              "evaluation": {
+                "status": null, "tier_current": null, "tier_target": null,
+                "evidence_found": false, "confidence_score": 0, "document_references": [],
+                "findings": { "strengths": [], "gaps": [], "recommendations": [] }
+              }
+            },
+            {
+              "id": "GV.RR-02",
+              "statement": "Roles, responsibilities, and authorities related to cybersecurity risk management are established, communicated, understood, and enforced",
+              "evaluation": {
+                "status": null, "tier_current": null, "tier_target": null,
+                "evidence_found": false, "confidence_score": 0, "document_references": [],
+                "findings": { "strengths": [], "gaps": [], "recommendations": [] }
+              }
+            },
+            {
+              "id": "GV.RR-03",
+              "statement": "Adequate resources are allocated commensurate with the cybersecurity risk strategy, roles, responsibilities, and policies",
+              "evaluation": {
+                "status": null, "tier_current": null, "tier_target": null,
+                "evidence_found": false, "confidence_score": 0, "document_references": [],
+                "findings": { "strengths": [], "gaps": [], "recommendations": [] }
+              }
+            },
+            {
+              "id": "GV.RR-04",
+              "statement": "Cybersecurity is included in human resources practices",
+              "evaluation": {
+                "status": null, "tier_current": null, "tier_target": null,
+                "evidence_found": false, "confidence_score": 0, "document_references": [],
+                "findings": { "strengths": [], "gaps": [], "recommendations": [] }
+              }
+            }
+          ]
+        },
+        {
+          "id": "GV.PO",
+          "name": "Policy",
+          "description": "Organizational cybersecurity policy is established, communicated, and enforced",
+          "subcategories": [
+            {
+              "id": "GV.PO-01",
+              "statement": "Policy for managing cybersecurity risks is established based on organizational context, cybersecurity strategy, and priorities and is communicated and enforced",
+              "evaluation": {
+                "status": null, "tier_current": null, "tier_target": null,
+                "evidence_found": false, "confidence_score": 0, "document_references": [],
+                "findings": { "strengths": [], "gaps": [], "recommendations": [] }
+              }
+            },
+            {
+              "id": "GV.PO-02",
+              "statement": "Policy for managing cybersecurity risks is reviewed, updated, communicated, and enforced to reflect changes in requirements, threats, technology, and organizational mission",
+              "evaluation": {
+                "status": null, "tier_current": null, "tier_target": null,
+                "evidence_found": false, "confidence_score": 0, "document_references": [],
+                "findings": { "strengths": [], "gaps": [], "recommendations": [] }
+              }
+            }
+          ]
+        },
+        {
+          "id": "GV.OV",
+          "name": "Oversight",
+          "description": "Results of organization-wide cybersecurity risk management activities and performance are used to inform, improve, and adjust the risk management strategy",
+          "subcategories": [
+            {
+              "id": "GV.OV-01",
+              "statement": "Cybersecurity risk management strategy outcomes are reviewed to inform and adjust strategy and direction",
+              "evaluation": {
+                "status": null, "tier_current": null, "tier_target": null,
+                "evidence_found": false, "confidence_score": 0, "document_references": [],
+                "findings": { "strengths": [], "gaps": [], "recommendations": [] }
+              }
+            },
+            {
+              "id": "GV.OV-02",
+              "statement": "The cybersecurity risk management strategy is reviewed and adjusted to ensure coverage of organizational requirements and risks",
+              "evaluation": {
+                "status": null, "tier_current": null, "tier_target": null,
+                "evidence_found": false, "confidence_score": 0, "document_references": [],
+                "findings": { "strengths": [], "gaps": [], "recommendations": [] }
+              }
+            },
+            {
+              "id": "GV.OV-03",
+              "statement": "Organizational cybersecurity risk management performance is evaluated and reviewed for adjustments needed",
+              "evaluation": {
+                "status": null, "tier_current": null, "tier_target": null,
+                "evidence_found": false, "confidence_score": 0, "document_references": [],
+                "findings": { "strengths": [], "gaps": [], "recommendations": [] }
+              }
+            }
+          ]
+        },
+        {
+          "id": "GV.SC",
+          "name": "Cybersecurity Supply Chain Risk Management",
+          "description": "Cyber supply chain risk management processes are identified, established, managed, monitored, and improved by organizational stakeholders",
+          "subcategories": [
+            {
+              "id": "GV.SC-01",
+              "statement": "A cybersecurity supply chain risk management program, strategy, objectives, policies, and processes are established and agreed to by organizational stakeholders",
+              "evaluation": {
+                "status": null, "tier_current": null, "tier_target": null,
+                "evidence_found": false, "confidence_score": 0, "document_references": [],
+                "findings": { "strengths": [], "gaps": [], "recommendations": [] }
+              }
+            },
+            {
+              "id": "GV.SC-02",
+              "statement": "Cybersecurity roles and responsibilities for suppliers, customers, and partners are established, communicated, and coordinated internally and externally",
+              "evaluation": {
+                "status": null, "tier_current": null, "tier_target": null,
+                "evidence_found": false, "confidence_score": 0, "document_references": [],
+                "findings": { "strengths": [], "gaps": [], "recommendations": [] }
+              }
+            },
+            {
+              "id": "GV.SC-03",
+              "statement": "Cybersecurity supply chain risk management is integrated into cybersecurity and enterprise risk management, risk assessment, and improvement processes",
+              "evaluation": {
+                "status": null, "tier_current": null, "tier_target": null,
+                "evidence_found": false, "confidence_score": 0, "document_references": [],
+                "findings": { "strengths": [], "gaps": [], "recommendations": [] }
+              }
+            },
+            {
+              "id": "GV.SC-04",
+              "statement": "Suppliers are known and prioritized by criticality",
+              "evaluation": {
+                "status": null, "tier_current": null, "tier_target": null,
+                "evidence_found": false, "confidence_score": 0, "document_references": [],
+                "findings": { "strengths": [], "gaps": [], "recommendations": [] }
+              }
+            },
+            {
+              "id": "GV.SC-05",
+              "statement": "Requirements to address cybersecurity risks in supply chains are established, prioritized, and integrated into contracts and other types of agreements with suppliers and other relevant third parties",
+              "evaluation": {
+                "status": null, "tier_current": null, "tier_target": null,
+                "evidence_found": false, "confidence_score": 0, "document_references": [],
+                "findings": { "strengths": [], "gaps": [], "recommendations": [] }
+              }
+            },
+            {
+              "id": "GV.SC-06",
+              "statement": "Planning and due diligence are performed to reduce risks before entering into formal supplier or other third-party relationships",
+              "evaluation": {
+                "status": null, "tier_current": null, "tier_target": null,
+                "evidence_found": false, "confidence_score": 0, "document_references": [],
+                "findings": { "strengths": [], "gaps": [], "recommendations": [] }
+              }
+            },
+            {
+              "id": "GV.SC-07",
+              "statement": "The risks posed by a supplier, their products and services, and other third parties are understood, recorded, prioritized, assessed, responded to, and monitored over the course of the relationship",
+              "evaluation": {
+                "status": null, "tier_current": null, "tier_target": null,
+                "evidence_found": false, "confidence_score": 0, "document_references": [],
+                "findings": { "strengths": [], "gaps": [], "recommendations": [] }
+              }
+            },
+            {
+              "id": "GV.SC-08",
+              "statement": "Relevant suppliers and other third parties are included in incident planning, response, and recovery activities",
+              "evaluation": {
+                "status": null, "tier_current": null, "tier_target": null,
+                "evidence_found": false, "confidence_score": 0, "document_references": [],
+                "findings": { "strengths": [], "gaps": [], "recommendations": [] }
+              }
+            },
+            {
+              "id": "GV.SC-09",
+              "statement": "Supply chain security practices are integrated into cybersecurity and enterprise risk management programs, and their performance is monitored throughout the technology product and service life cycle",
+              "evaluation": {
+                "status": null, "tier_current": null, "tier_target": null,
+                "evidence_found": false, "confidence_score": 0, "document_references": [],
+                "findings": { "strengths": [], "gaps": [], "recommendations": [] }
+              }
+            },
+            {
+              "id": "GV.SC-10",
+              "statement": "Cybersecurity supply chain risk management plans include provisions for activities that occur after the conclusion of a partnership or service agreement",
+              "evaluation": {
+                "status": null, "tier_current": null, "tier_target": null,
+                "evidence_found": false, "confidence_score": 0, "document_references": [],
+                "findings": { "strengths": [], "gaps": [], "recommendations": [] }
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "ID",
+      "name": "IDENTIFY",
+      "description": "The organization's current cybersecurity risks are understood",
+      "color_hex": "#1F6BB0",
+      "category_count": 3,
+      "subcategory_count": 21,
+      "categories": [
+        {
+          "id": "ID.AM",
+          "name": "Asset Management",
+          "description": "Assets (e.g., data, hardware, software, systems, facilities, services, people) that enable the organization to achieve business purposes are identified and managed consistent with their relative importance to organizational objectives and the organization's risk strategy",
+          "subcategories": [
+            {
+              "id": "ID.AM-01",
+              "statement": "Inventories of hardware managed by the organization are maintained",
+              "evaluation": {
+                "status": null, "tier_current": null, "tier_target": null,
+                "evidence_found": false, "confidence_score": 0, "document_references": [],
+                "findings": { "strengths": [], "gaps": [], "recommendations": [] }
+              }
+            },
+            {
+              "id": "ID.AM-02",
+              "statement": "Inventories of software, services, and systems managed by the organization are maintained",
+              "evaluation": {
+                "status": null, "tier_current": null, "tier_target": null,
+                "evidence_found": false, "confidence_score": 0, "document_references": [],
+                "findings": { "strengths": [], "gaps": [], "recommendations": [] }
+              }
+            },
+            {
+              "id": "ID.AM-03",
+              "statement": "Representations of the organization's authorized network communication and internal and external network data flows are maintained",
+              "evaluation": {
+                "status": null, "tier_current": null, "tier_target": null,
+                "evidence_found": false, "confidence_score": 0, "document_references": [],
+                "findings": { "strengths": [], "gaps": [], "recommendations": [] }
+              }
+            },
+            {
+              "id": "ID.AM-04",
+              "statement": "Inventories of services provided by suppliers are maintained",
+              "evaluation": {
+                "status": null, "tier_current": null, "tier_target": null,
+                "evidence_found": false, "confidence_score": 0, "document_references": [],
+                "findings": { "strengths": [], "gaps": [], "recommendations": [] }
+              }
+            },
+            {
+              "id": "ID.AM-05",
+              "statement": "Assets are prioritized based on classification, criticality, resources, and impact on the mission",
+              "evaluation": {
+                "status": null, "tier_current": null, "tier_target": null,
+                "evidence_found": false, "confidence_score": 0, "document_references": [],
+                "findings": { "strengths": [], "gaps": [], "recommendations": [] }
+              }
+            },
+            {
+              "id": "ID.AM-07",
+              "statement": "Inventories of data and corresponding metadata for designated data types are maintained",
+              "evaluation": {
+                "status": null, "tier_current": null, "tier_target": null,
+                "evidence_found": false, "confidence_score": 0, "document_references": [],
+                "findings": { "strengths": [], "gaps": [], "recommendations": [] }
+              }
+            },
+            {
+              "id": "ID.AM-08",
+              "statement": "Systems, hardware, software, services, and data are managed throughout their life cycles",
+              "evaluation": {
+                "status": null, "tier_current": null, "tier_target": null,
+                "evidence_found": false, "confidence_score": 0, "document_references": [],
+                "findings": { "strengths": [], "gaps": [], "recommendations": [] }
+              }
+            }
+          ]
+        },
+        {
+          "id": "ID.RA",
+          "name": "Risk Assessment",
+          "description": "The cybersecurity risk to the organization, assets, and individuals is understood by the organization",
+          "subcategories": [
+            {
+              "id": "ID.RA-01",
+              "statement": "Vulnerabilities in assets are identified, validated, and recorded",
+              "evaluation": {
+                "status": null, "tier_current": null, "tier_target": null,
+                "evidence_found": false, "confidence_score": 0, "document_references": [],
+                "findings": { "strengths": [], "gaps": [], "recommendations": [] }
+              }
+            },
+            {
+              "id": "ID.RA-02",
+              "statement": "Cyber threat intelligence is received from information sharing forums and sources",
+              "evaluation": {
+                "status": null, "tier_current": null, "tier_target": null,
+                "evidence_found": false, "confidence_score": 0, "document_references": [],
+                "findings": { "strengths": [], "gaps": [], "recommendations": [] }
+              }
+            },
+            {
+              "id": "ID.RA-03",
+              "statement": "Internal and external threats to the organization are identified and recorded",
+              "evaluation": {
+                "status": null, "tier_current": null, "tier_target": null,
+                "evidence_found": false, "confidence_score": 0, "document_references": [],
+                "findings": { "strengths": [], "gaps": [], "recommendations": [] }
+              }
+            },
+            {
+              "id": "ID.RA-04",
+              "statement": "Potential impacts and likelihoods of threats exploiting vulnerabilities are identified and recorded",
+              "evaluation": {
+                "status": null, "tier_current": null, "tier_target": null,
+                "evidence_found": false, "confidence_score": 0, "document_references": [],
+                "findings": { "strengths": [], "gaps": [], "recommendations": [] }
+              }
+            },
+            {
+              "id": "ID.RA-05",
+              "statement": "Threats, vulnerabilities, likelihoods, and impacts are used to understand inherent risk and inform risk response prioritization",
+              "evaluation": {
+                "status": null, "tier_current": null, "tier_target": null,
+                "evidence_found": false, "confidence_score": 0, "document_references": [],
+                "findings": { "strengths": [], "gaps": [], "recommendations": [] }
+              }
+            },
+            {
+              "id": "ID.RA-06",
+              "statement": "Risk responses are chosen, prioritized, planned, tracked, and communicated",
+              "evaluation": {
+                "status": null, "tier_current": null, "tier_target": null,
+                "evidence_found": false, "confidence_score": 0, "document_references": [],
+                "findings": { "strengths": [], "gaps": [], "recommendations": [] }
+              }
+            },
+            {
+              "id": "ID.RA-07",
+              "statement": "Changes and exceptions are managed, assessed for risk impact, recorded, and tracked",
+              "evaluation": {
+                "status": null, "tier_current": null, "tier_target": null,
+                "evidence_found": false, "confidence_score": 0, "document_references": [],
+                "findings": { "strengths": [], "gaps": [], "recommendations": [] }
+              }
+            },
+            {
+              "id": "ID.RA-08",
+              "statement": "Processes for receiving, analyzing, and responding to vulnerability disclosures are established",
+              "evaluation": {
+                "status": null, "tier_current": null, "tier_target": null,
+                "evidence_found": false, "confidence_score": 0, "document_references": [],
+                "findings": { "strengths": [], "gaps": [], "recommendations": [] }
+              }
+            },
+            {
+              "id": "ID.RA-09",
+              "statement": "The authenticity and integrity of hardware and software are assessed prior to acquisition and use",
+              "evaluation": {
+                "status": null, "tier_current": null, "tier_target": null,
+                "evidence_found": false, "confidence_score": 0, "document_references": [],
+                "findings": { "strengths": [], "gaps": [], "recommendations": [] }
+              }
+            },
+            {
+              "id": "ID.RA-10",
+              "statement": "Critical suppliers are assessed prior to acquisition",
+              "evaluation": {
+                "status": null, "tier_current": null, "tier_target": null,
+                "evidence_found": false, "confidence_score": 0, "document_references": [],
+                "findings": { "strengths": [], "gaps": [], "recommendations": [] }
+              }
+            }
+          ]
+        },
+        {
+          "id": "ID.IM",
+          "name": "Improvement",
+          "description": "Improvements to organizational cybersecurity risk management processes, procedures and activities are identified across all CSF Functions",
+          "subcategories": [
+            {
+              "id": "ID.IM-01",
+              "statement": "Improvements are identified from evaluations",
+              "evaluation": {
+                "status": null, "tier_current": null, "tier_target": null,
+                "evidence_found": false, "confidence_score": 0, "document_references": [],
+                "findings": { "strengths": [], "gaps": [], "recommendations": [] }
+              }
+            },
+            {
+              "id": "ID.IM-02",
+              "statement": "Improvements are identified from security tests and exercises, including those done in coordination with suppliers and relevant third parties",
+              "evaluation": {
+                "status": null, "tier_current": null, "tier_target": null,
+                "evidence_found": false, "confidence_score": 0, "document_references": [],
+                "findings": { "strengths": [], "gaps": [], "recommendations": [] }
+              }
+            },
+            {
+              "id": "ID.IM-03",
+              "statement": "Improvements are identified from execution of operational processes, procedures, and activities",
+              "evaluation": {
+                "status": null, "tier_current": null, "tier_target": null,
+                "evidence_found": false, "confidence_score": 0, "document_references": [],
+                "findings": { "strengths": [], "gaps": [], "recommendations": [] }
+              }
+            },
+            {
+              "id": "ID.IM-04",
+              "statement": "Incident response plans and other cybersecurity plans that affect operations are established, communicated, maintained, and improved",
+              "evaluation": {
+                "status": null, "tier_current": null, "tier_target": null,
+                "evidence_found": false, "confidence_score": 0, "document_references": [],
+                "findings": { "strengths": [], "gaps": [], "recommendations": [] }
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "PR",
+      "name": "PROTECT",
+      "description": "Safeguards to manage the organization's cybersecurity risks are used",
+      "color_hex": "#2E8B57",
+      "category_count": 5,
+      "subcategory_count": 22,
+      "categories": [
+        {
+          "id": "PR.AA",
+          "name": "Identity Management, Authentication, and Access Control",
+          "description": "Access to physical and logical assets is limited to authorized users, services, and hardware and managed commensurate with the assessed risk of unauthorized access",
+          "subcategories": [
+            {
+              "id": "PR.AA-01",
+              "statement": "Identities and credentials for authorized users, services, and hardware are managed by the organization",
+              "evaluation": {
+                "status": null, "tier_current": null, "tier_target": null,
+                "evidence_found": false, "confidence_score": 0, "document_references": [],
+                "findings": { "strengths": [], "gaps": [], "recommendations": [] }
+              }
+            },
+            {
+              "id": "PR.AA-02",
+              "statement": "Identities are proofed and bound to credentials based on the context of interactions",
+              "evaluation": {
+                "status": null, "tier_current": null, "tier_target": null,
+                "evidence_found": false, "confidence_score": 0, "document_references": [],
+                "findings": { "strengths": [], "gaps": [], "recommendations": [] }
+              }
+            },
+            {
+              "id": "PR.AA-03",
+              "statement": "Users, services, and hardware are authenticated",
+              "evaluation": {
+                "status": null, "tier_current": null, "tier_target": null,
+                "evidence_found": false, "confidence_score": 0, "document_references": [],
+                "findings": { "strengths": [], "gaps": [], "recommendations": [] }
+              }
+            },
+            {
+              "id": "PR.AA-04",
+              "statement": "Identity assertions are protected, conveyed, and verified",
+              "evaluation": {
+                "status": null, "tier_current": null, "tier_target": null,
+                "evidence_found": false, "confidence_score": 0, "document_references": [],
+                "findings": { "strengths": [], "gaps": [], "recommendations": [] }
+              }
+            },
+            {
+              "id": "PR.AA-05",
+              "statement": "Access permissions, entitlements, and authorizations are defined in a policy, managed, enforced, and reviewed, and incorporate the principles of least privilege and separation of duties",
+              "evaluation": {
+                "status": null, "tier_current": null, "tier_target": null,
+                "evidence_found": false, "confidence_score": 0, "document_references": [],
+                "findings": { "strengths": [], "gaps": [], "recommendations": [] }
+              }
+            },
+            {
+              "id": "PR.AA-06",
+              "statement": "Physical access to assets is managed, monitored, and enforced commensurate with risk",
+              "evaluation": {
+                "status": null, "tier_current": null, "tier_target": null,
+                "evidence_found": false, "confidence_score": 0, "document_references": [],
+                "findings": { "strengths": [], "gaps": [], "recommendations": [] }
+              }
+            }
+          ]
+        },
+        {
+          "id": "PR.AT",
+          "name": "Awareness and Training",
+          "description": "The organization's personnel are provided with cybersecurity awareness and training so that they can perform their cybersecurity-related tasks",
+          "subcategories": [
+            {
+              "id": "PR.AT-01",
+              "statement": "Personnel are provided with awareness and training so that they possess the knowledge and skills to perform general tasks with cybersecurity risks in mind",
+              "evaluation": {
+                "status": null, "tier_current": null, "tier_target": null,
+                "evidence_found": false, "confidence_score": 0, "document_references": [],
+                "findings": { "strengths": [], "gaps": [], "recommendations": [] }
+              }
+            },
+            {
+              "id": "PR.AT-02",
+              "statement": "Individuals in specialized roles are provided with awareness and training so that they possess the knowledge and skills to perform relevant tasks with cybersecurity risks in mind",
+              "evaluation": {
+                "status": null, "tier_current": null, "tier_target": null,
+                "evidence_found": false, "confidence_score": 0, "document_references": [],
+                "findings": { "strengths": [], "gaps": [], "recommendations": [] }
+              }
+            }
+          ]
+        },
+        {
+          "id": "PR.DS",
+          "name": "Data Security",
+          "description": "Data are managed consistent with the organization's risk strategy to protect the confidentiality, integrity, and availability of information",
+          "subcategories": [
+            {
+              "id": "PR.DS-01",
+              "statement": "The confidentiality, integrity, and availability of data-at-rest are protected",
+              "evaluation": {
+                "status": null, "tier_current": null, "tier_target": null,
+                "evidence_found": false, "confidence_score": 0, "document_references": [],
+                "findings": { "strengths": [], "gaps": [], "recommendations": [] }
+              }
+            },
+            {
+              "id": "PR.DS-02",
+              "statement": "The confidentiality, integrity, and availability of data-in-transit are protected",
+              "evaluation": {
+                "status": null, "tier_current": null, "tier_target": null,
+                "evidence_found": false, "confidence_score": 0, "document_references": [],
+                "findings": { "strengths": [], "gaps": [], "recommendations": [] }
+              }
+            },
+            {
+              "id": "PR.DS-10",
+              "statement": "The confidentiality, integrity, and availability of data-in-use are protected",
+              "evaluation": {
+                "status": null, "tier_current": null, "tier_target": null,
+                "evidence_found": false, "confidence_score": 0, "document_references": [],
+                "findings": { "strengths": [], "gaps": [], "recommendations": [] }
+              }
+            },
+            {
+              "id": "PR.DS-11",
+              "statement": "Backups of data are created, protected, maintained, and tested",
+              "evaluation": {
+                "status": null, "tier_current": null, "tier_target": null,
+                "evidence_found": false, "confidence_score": 0, "document_references": [],
+                "findings": { "strengths": [], "gaps": [], "recommendations": [] }
+              }
+            }
+          ]
+        },
+        {
+          "id": "PR.PS",
+          "name": "Platform Security",
+          "description": "The hardware, software (e.g., firmware, operating systems, applications), and services of physical and virtual platforms are managed consistent with the organization's risk strategy to protect their confidentiality, integrity, and availability",
+          "subcategories": [
+            {
+              "id": "PR.PS-01",
+              "statement": "Configuration management practices are established and applied",
+              "evaluation": {
+                "status": null, "tier_current": null, "tier_target": null,
+                "evidence_found": false, "confidence_score": 0, "document_references": [],
+                "findings": { "strengths": [], "gaps": [], "recommendations": [] }
+              }
+            },
+            {
+              "id": "PR.PS-02",
+              "statement": "Software is maintained, replaced, and removed commensurate with risk",
+              "evaluation": {
+                "status": null, "tier_current": null, "tier_target": null,
+                "evidence_found": false, "confidence_score": 0, "document_references": [],
+                "findings": { "strengths": [], "gaps": [], "recommendations": [] }
+              }
+            },
+            {
+              "id": "PR.PS-03",
+              "statement": "Hardware is maintained, replaced, and removed commensurate with risk",
+              "evaluation": {
+                "status": null, "tier_current": null, "tier_target": null,
+                "evidence_found": false, "confidence_score": 0, "document_references": [],
+                "findings": { "strengths": [], "gaps": [], "recommendations": [] }
+              }
+            },
+            {
+              "id": "PR.PS-04",
+              "statement": "Log records are generated and made available for continuous monitoring",
+              "evaluation": {
+                "status": null, "tier_current": null, "tier_target": null,
+                "evidence_found": false, "confidence_score": 0, "document_references": [],
+                "findings": { "strengths": [], "gaps": [], "recommendations": [] }
+              }
+            },
+            {
+              "id": "PR.PS-05",
+              "statement": "Installation and execution of unauthorized software are prevented",
+              "evaluation": {
+                "status": null, "tier_current": null, "tier_target": null,
+                "evidence_found": false, "confidence_score": 0, "document_references": [],
+                "findings": { "strengths": [], "gaps": [], "recommendations": [] }
+              }
+            },
+            {
+              "id": "PR.PS-06",
+              "statement": "Secure software development practices are integrated, and their performance is monitored throughout the software development life cycle",
+              "evaluation": {
+                "status": null, "tier_current": null, "tier_target": null,
+                "evidence_found": false, "confidence_score": 0, "document_references": [],
+                "findings": { "strengths": [], "gaps": [], "recommendations": [] }
+              }
+            }
+          ]
+        },
+        {
+          "id": "PR.IR",
+          "name": "Technology Infrastructure Resilience",
+          "description": "Security architectures are managed with the organization's risk strategy to protect asset confidentiality, integrity, and availability, and organizational resilience",
+          "subcategories": [
+            {
+              "id": "PR.IR-01",
+              "statement": "Networks and environments are protected from unauthorized logical access and usage",
+              "evaluation": {
+                "status": null, "tier_current": null, "tier_target": null,
+                "evidence_found": false, "confidence_score": 0, "document_references": [],
+                "findings": { "strengths": [], "gaps": [], "recommendations": [] }
+              }
+            },
+            {
+              "id": "PR.IR-02",
+              "statement": "The organization's technology assets are protected from environmental threats",
+              "evaluation": {
+                "status": null, "tier_current": null, "tier_target": null,
+                "evidence_found": false, "confidence_score": 0, "document_references": [],
+                "findings": { "strengths": [], "gaps": [], "recommendations": [] }
+              }
+            },
+            {
+              "id": "PR.IR-03",
+              "statement": "Mechanisms are implemented to achieve resilience requirements in normal and adverse situations",
+              "evaluation": {
+                "status": null, "tier_current": null, "tier_target": null,
+                "evidence_found": false, "confidence_score": 0, "document_references": [],
+                "findings": { "strengths": [], "gaps": [], "recommendations": [] }
+              }
+            },
+            {
+              "id": "PR.IR-04",
+              "statement": "Adequate resource capacity to ensure availability is maintained",
+              "evaluation": {
+                "status": null, "tier_current": null, "tier_target": null,
+                "evidence_found": false, "confidence_score": 0, "document_references": [],
+                "findings": { "strengths": [], "gaps": [], "recommendations": [] }
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "DE",
+      "name": "DETECT",
+      "description": "Possible cybersecurity attacks and compromises are found and analyzed",
+      "color_hex": "#FF8C00",
+      "category_count": 2,
+      "subcategory_count": 11,
+      "categories": [
+        {
+          "id": "DE.CM",
+          "name": "Continuous Monitoring",
+          "description": "Assets are monitored to find anomalies, indicators of compromise, and other potentially adverse events",
+          "subcategories": [
+            {
+              "id": "DE.CM-01",
+              "statement": "Networks and network services are monitored to find potentially adverse events",
+              "evaluation": {
+                "status": null, "tier_current": null, "tier_target": null,
+                "evidence_found": false, "confidence_score": 0, "document_references": [],
+                "findings": { "strengths": [], "gaps": [], "recommendations": [] }
+              }
+            },
+            {
+              "id": "DE.CM-02",
+              "statement": "The physical environment is monitored to find potentially adverse events",
+              "evaluation": {
+                "status": null, "tier_current": null, "tier_target": null,
+                "evidence_found": false, "confidence_score": 0, "document_references": [],
+                "findings": { "strengths": [], "gaps": [], "recommendations": [] }
+              }
+            },
+            {
+              "id": "DE.CM-03",
+              "statement": "Personnel activity and technology usage are monitored to find potentially adverse events",
+              "evaluation": {
+                "status": null, "tier_current": null, "tier_target": null,
+                "evidence_found": false, "confidence_score": 0, "document_references": [],
+                "findings": { "strengths": [], "gaps": [], "recommendations": [] }
+              }
+            },
+            {
+              "id": "DE.CM-06",
+              "statement": "External service provider activities and services are monitored to find potentially adverse events",
+              "evaluation": {
+                "status": null, "tier_current": null, "tier_target": null,
+                "evidence_found": false, "confidence_score": 0, "document_references": [],
+                "findings": { "strengths": [], "gaps": [], "recommendations": [] }
+              }
+            },
+            {
+              "id": "DE.CM-09",
+              "statement": "Computing hardware and software, runtime environments, and their data are monitored to find potentially adverse events",
+              "evaluation": {
+                "status": null, "tier_current": null, "tier_target": null,
+                "evidence_found": false, "confidence_score": 0, "document_references": [],
+                "findings": { "strengths": [], "gaps": [], "recommendations": [] }
+              }
+            }
+          ]
+        },
+        {
+          "id": "DE.AE",
+          "name": "Adverse Event Analysis",
+          "description": "Anomalies, indicators of compromise, and other potentially adverse events are analyzed to characterize the events and detect cybersecurity incidents",
+          "subcategories": [
+            {
+              "id": "DE.AE-02",
+              "statement": "Potentially adverse events are analyzed to better understand associated activities",
+              "evaluation": {
+                "status": null, "tier_current": null, "tier_target": null,
+                "evidence_found": false, "confidence_score": 0, "document_references": [],
+                "findings": { "strengths": [], "gaps": [], "recommendations": [] }
+              }
+            },
+            {
+              "id": "DE.AE-03",
+              "statement": "Information is correlated from multiple sources",
+              "evaluation": {
+                "status": null, "tier_current": null, "tier_target": null,
+                "evidence_found": false, "confidence_score": 0, "document_references": [],
+                "findings": { "strengths": [], "gaps": [], "recommendations": [] }
+              }
+            },
+            {
+              "id": "DE.AE-04",
+              "statement": "The estimated impact and scope of adverse events are understood",
+              "evaluation": {
+                "status": null, "tier_current": null, "tier_target": null,
+                "evidence_found": false, "confidence_score": 0, "document_references": [],
+                "findings": { "strengths": [], "gaps": [], "recommendations": [] }
+              }
+            },
+            {
+              "id": "DE.AE-06",
+              "statement": "Information on adverse events is provided to authorized staff and tools",
+              "evaluation": {
+                "status": null, "tier_current": null, "tier_target": null,
+                "evidence_found": false, "confidence_score": 0, "document_references": [],
+                "findings": { "strengths": [], "gaps": [], "recommendations": [] }
+              }
+            },
+            {
+              "id": "DE.AE-07",
+              "statement": "Cyber threat intelligence and other contextual information are integrated into the analysis",
+              "evaluation": {
+                "status": null, "tier_current": null, "tier_target": null,
+                "evidence_found": false, "confidence_score": 0, "document_references": [],
+                "findings": { "strengths": [], "gaps": [], "recommendations": [] }
+              }
+            },
+            {
+              "id": "DE.AE-08",
+              "statement": "Incidents are declared when adverse events meet the defined incident criteria",
+              "evaluation": {
+                "status": null, "tier_current": null, "tier_target": null,
+                "evidence_found": false, "confidence_score": 0, "document_references": [],
+                "findings": { "strengths": [], "gaps": [], "recommendations": [] }
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "RS",
+      "name": "RESPOND",
+      "description": "Actions regarding a detected cybersecurity incident are taken",
+      "color_hex": "#CC2222",
+      "category_count": 4,
+      "subcategory_count": 13,
+      "categories": [
+        {
+          "id": "RS.MA",
+          "name": "Incident Management",
+          "description": "Responses to detected cybersecurity incidents are managed",
+          "subcategories": [
+            {
+              "id": "RS.MA-01",
+              "statement": "The incident response plan is executed in coordination with relevant third parties once an incident is declared",
+              "evaluation": {
+                "status": null, "tier_current": null, "tier_target": null,
+                "evidence_found": false, "confidence_score": 0, "document_references": [],
+                "findings": { "strengths": [], "gaps": [], "recommendations": [] }
+              }
+            },
+            {
+              "id": "RS.MA-02",
+              "statement": "Incident reports are triaged and validated",
+              "evaluation": {
+                "status": null, "tier_current": null, "tier_target": null,
+                "evidence_found": false, "confidence_score": 0, "document_references": [],
+                "findings": { "strengths": [], "gaps": [], "recommendations": [] }
+              }
+            },
+            {
+              "id": "RS.MA-03",
+              "statement": "Incidents are categorized and prioritized",
+              "evaluation": {
+                "status": null, "tier_current": null, "tier_target": null,
+                "evidence_found": false, "confidence_score": 0, "document_references": [],
+                "findings": { "strengths": [], "gaps": [], "recommendations": [] }
+              }
+            },
+            {
+              "id": "RS.MA-04",
+              "statement": "Incidents are escalated or elevated as needed",
+              "evaluation": {
+                "status": null, "tier_current": null, "tier_target": null,
+                "evidence_found": false, "confidence_score": 0, "document_references": [],
+                "findings": { "strengths": [], "gaps": [], "recommendations": [] }
+              }
+            },
+            {
+              "id": "RS.MA-05",
+              "statement": "The criteria for initiating incident recovery are applied",
+              "evaluation": {
+                "status": null, "tier_current": null, "tier_target": null,
+                "evidence_found": false, "confidence_score": 0, "document_references": [],
+                "findings": { "strengths": [], "gaps": [], "recommendations": [] }
+              }
+            }
+          ]
+        },
+        {
+          "id": "RS.AN",
+          "name": "Incident Analysis",
+          "description": "Investigations are conducted to ensure effective response and support forensics and recovery activities",
+          "subcategories": [
+            {
+              "id": "RS.AN-03",
+              "statement": "Analysis is performed to establish what has taken place during an incident and the root cause of the incident",
+              "evaluation": {
+                "status": null, "tier_current": null, "tier_target": null,
+                "evidence_found": false, "confidence_score": 0, "document_references": [],
+                "findings": { "strengths": [], "gaps": [], "recommendations": [] }
+              }
+            },
+            {
+              "id": "RS.AN-06",
+              "statement": "Actions performed during an investigation are recorded, and the records' integrity and provenance are preserved",
+              "evaluation": {
+                "status": null, "tier_current": null, "tier_target": null,
+                "evidence_found": false, "confidence_score": 0, "document_references": [],
+                "findings": { "strengths": [], "gaps": [], "recommendations": [] }
+              }
+            },
+            {
+              "id": "RS.AN-07",
+              "statement": "Incident data and metadata are collected, and their integrity and provenance are preserved",
+              "evaluation": {
+                "status": null, "tier_current": null, "tier_target": null,
+                "evidence_found": false, "confidence_score": 0, "document_references": [],
+                "findings": { "strengths": [], "gaps": [], "recommendations": [] }
+              }
+            },
+            {
+              "id": "RS.AN-08",
+              "statement": "An incident's magnitude is estimated and validated",
+              "evaluation": {
+                "status": null, "tier_current": null, "tier_target": null,
+                "evidence_found": false, "confidence_score": 0, "document_references": [],
+                "findings": { "strengths": [], "gaps": [], "recommendations": [] }
+              }
+            }
+          ]
+        },
+        {
+          "id": "RS.CO",
+          "name": "Incident Response Reporting and Communication",
+          "description": "Response activities are coordinated with internal and external stakeholders as required by laws, regulations, or policies",
+          "subcategories": [
+            {
+              "id": "RS.CO-02",
+              "statement": "Internal and external stakeholders are notified of incidents",
+              "evaluation": {
+                "status": null, "tier_current": null, "tier_target": null,
+                "evidence_found": false, "confidence_score": 0, "document_references": [],
+                "findings": { "strengths": [], "gaps": [], "recommendations": [] }
+              }
+            },
+            {
+              "id": "RS.CO-03",
+              "statement": "Information is shared with designated internal and external stakeholders",
+              "evaluation": {
+                "status": null, "tier_current": null, "tier_target": null,
+                "evidence_found": false, "confidence_score": 0, "document_references": [],
+                "findings": { "strengths": [], "gaps": [], "recommendations": [] }
+              }
+            }
+          ]
+        },
+        {
+          "id": "RS.MI",
+          "name": "Incident Mitigation",
+          "description": "Activities are performed to prevent expansion of an event and mitigate its effects",
+          "subcategories": [
+            {
+              "id": "RS.MI-01",
+              "statement": "Incidents are contained",
+              "evaluation": {
+                "status": null, "tier_current": null, "tier_target": null,
+                "evidence_found": false, "confidence_score": 0, "document_references": [],
+                "findings": { "strengths": [], "gaps": [], "recommendations": [] }
+              }
+            },
+            {
+              "id": "RS.MI-02",
+              "statement": "Incidents are eradicated",
+              "evaluation": {
+                "status": null, "tier_current": null, "tier_target": null,
+                "evidence_found": false, "confidence_score": 0, "document_references": [],
+                "findings": { "strengths": [], "gaps": [], "recommendations": [] }
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "RC",
+      "name": "RECOVER",
+      "description": "Assets and operations affected by a cybersecurity incident are restored",
+      "color_hex": "#4B8B6F",
+      "category_count": 2,
+      "subcategory_count": 8,
+      "categories": [
+        {
+          "id": "RC.RP",
+          "name": "Incident Recovery Plan Execution",
+          "description": "Restoration activities are performed to ensure operational availability of systems and services affected by cybersecurity incidents",
+          "subcategories": [
+            {
+              "id": "RC.RP-01",
+              "statement": "The recovery portion of the incident response plan is executed once initiated from the incident response process",
+              "evaluation": {
+                "status": null, "tier_current": null, "tier_target": null,
+                "evidence_found": false, "confidence_score": 0, "document_references": [],
+                "findings": { "strengths": [], "gaps": [], "recommendations": [] }
+              }
+            },
+            {
+              "id": "RC.RP-02",
+              "statement": "Recovery actions are selected, scoped, prioritized, and performed",
+              "evaluation": {
+                "status": null, "tier_current": null, "tier_target": null,
+                "evidence_found": false, "confidence_score": 0, "document_references": [],
+                "findings": { "strengths": [], "gaps": [], "recommendations": [] }
+              }
+            },
+            {
+              "id": "RC.RP-03",
+              "statement": "The integrity of backups and other restoration assets is verified before using them for restoration",
+              "evaluation": {
+                "status": null, "tier_current": null, "tier_target": null,
+                "evidence_found": false, "confidence_score": 0, "document_references": [],
+                "findings": { "strengths": [], "gaps": [], "recommendations": [] }
+              }
+            },
+            {
+              "id": "RC.RP-04",
+              "statement": "Critical mission functions and cybersecurity risk management are considered to establish post-incident operational norms",
+              "evaluation": {
+                "status": null, "tier_current": null, "tier_target": null,
+                "evidence_found": false, "confidence_score": 0, "document_references": [],
+                "findings": { "strengths": [], "gaps": [], "recommendations": [] }
+              }
+            },
+            {
+              "id": "RC.RP-05",
+              "statement": "The integrity of restored assets is verified, systems and services are restored, and normal operating status is confirmed",
+              "evaluation": {
+                "status": null, "tier_current": null, "tier_target": null,
+                "evidence_found": false, "confidence_score": 0, "document_references": [],
+                "findings": { "strengths": [], "gaps": [], "recommendations": [] }
+              }
+            },
+            {
+              "id": "RC.RP-06",
+              "statement": "The end of incident recovery is declared based on criteria, and incident-related documentation is completed",
+              "evaluation": {
+                "status": null, "tier_current": null, "tier_target": null,
+                "evidence_found": false, "confidence_score": 0, "document_references": [],
+                "findings": { "strengths": [], "gaps": [], "recommendations": [] }
+              }
+            }
+          ]
+        },
+        {
+          "id": "RC.CO",
+          "name": "Incident Recovery Communication",
+          "description": "Restoration activities are coordinated with internal and external parties",
+          "subcategories": [
+            {
+              "id": "RC.CO-03",
+              "statement": "Recovery activities and progress in restoring operational capabilities are communicated to designated internal and external stakeholders",
+              "evaluation": {
+                "status": null, "tier_current": null, "tier_target": null,
+                "evidence_found": false, "confidence_score": 0, "document_references": [],
+                "findings": { "strengths": [], "gaps": [], "recommendations": [] }
+              }
+            },
+            {
+              "id": "RC.CO-04",
+              "statement": "Public updates on incident recovery are shared using approved methods and messaging",
+              "evaluation": {
+                "status": null, "tier_current": null, "tier_target": null,
+                "evidence_found": false, "confidence_score": 0, "document_references": [],
+                "findings": { "strengths": [], "gaps": [], "recommendations": [] }
+              }
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "report_summary": {
+    "total_subcategories": 106,
+    "subcategories_by_function": {
+      "GV": 31,
+      "ID": 21,
+      "PR": 22,
+      "DE": 11,
+      "RS": 13,
+      "RC": 8
+    },
+    "assessment_metrics": {
+      "total_evaluated": 0,
+      "fully_achieved": 0,
+      "largely_achieved": 0,
+      "partially_achieved": 0,
+      "not_achieved": 0,
+      "not_applicable": 0,
+      "overall_maturity_tier": null,
+      "average_confidence_score": 0,
+      "subcategories_with_gaps": 0
+    },
+    "function_summary": {
+      "GV": { "fully_achieved": 0, "largely_achieved": 0, "partially_achieved": 0, "not_achieved": 0, "maturity_tier": null },
+      "ID": { "fully_achieved": 0, "largely_achieved": 0, "partially_achieved": 0, "not_achieved": 0, "maturity_tier": null },
+      "PR": { "fully_achieved": 0, "largely_achieved": 0, "partially_achieved": 0, "not_achieved": 0, "maturity_tier": null },
+      "DE": { "fully_achieved": 0, "largely_achieved": 0, "partially_achieved": 0, "not_achieved": 0, "maturity_tier": null },
+      "RS": { "fully_achieved": 0, "largely_achieved": 0, "partially_achieved": 0, "not_achieved": 0, "maturity_tier": null },
+      "RC": { "fully_achieved": 0, "largely_achieved": 0, "partially_achieved": 0, "not_achieved": 0, "maturity_tier": null }
+    }
+  }
+}

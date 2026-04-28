@@ -1,0 +1,780 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Compliance Gap Analyzer</title>
+  <link rel="stylesheet" href="/static/style.css" />
+  <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.0/dist/chart.umd.min.js"></script>
+</head>
+<body>
+
+<!-- ═══════════════════════════════ HEADER ═══════════════════════════════ -->
+<header class="site-header">
+  <div class="header-inner">
+    <div class="logo">
+      <svg width="28" height="28" viewBox="0 0 28 28" fill="none">
+        <path d="M14 2L4 7v7c0 5.5 4.3 10.7 10 12 5.7-1.3 10-6.5 10-12V7L14 2z"
+              fill="#00d4ff" fill-opacity="0.15" stroke="#00d4ff" stroke-width="1.5"/>
+        <path d="M10 14l3 3 5-5" stroke="#00d4ff" stroke-width="2"
+              stroke-linecap="round" stroke-linejoin="round"/>
+      </svg>
+      <span>Compliance Gap Analyzer</span>
+    </div>
+    <div class="header-badge">AI-Powered GRC · Gemini 2.5 Flash</div>
+  </div>
+</header>
+
+<!-- ══════════════════════════ UPLOAD SECTION ═══════════════════════════ -->
+<main>
+<section id="upload-section">
+  <div class="upload-container">
+    <div class="upload-card">
+      <h1 class="upload-title">Analyze Policy Document</h1>
+      <p class="upload-subtitle">
+        Upload your policy document and select a framework to get an instant
+        AI-powered compliance gap analysis.
+      </p>
+
+      <!-- Drop zone -->
+      <div id="dropzone" class="dropzone">
+        <div class="drop-icon">
+          <svg width="48" height="48" viewBox="0 0 48 48" fill="none">
+            <rect x="8" y="8" width="32" height="36" rx="3"
+                  fill="#00d4ff" fill-opacity="0.08" stroke="#00d4ff"
+                  stroke-width="1.5" stroke-dasharray="4 2"/>
+            <path d="M24 20v12M20 28l4 4 4-4" stroke="#00d4ff" stroke-width="2"
+                  stroke-linecap="round" stroke-linejoin="round"/>
+            <path d="M16 16h8M16 20h6" stroke="#00d4ff" stroke-width="1.5"
+                  stroke-linecap="round" opacity="0.5"/>
+          </svg>
+        </div>
+        <p class="drop-text">Drag &amp; drop your file here</p>
+        <p class="drop-sub">PDF or TXT &nbsp;·&nbsp; max 16 MB</p>
+        <label class="btn btn-outline" for="file-input">Browse File</label>
+        <input type="file" id="file-input" accept=".pdf,.txt" />
+        <div id="file-info" class="file-info hidden">
+          <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+            <path d="M3 2h7l3 3v9H3V2z" stroke="#00d4ff" stroke-width="1.2"/>
+            <path d="M10 2v3h3" stroke="#00d4ff" stroke-width="1.2"/>
+          </svg>
+          <span id="file-name"></span>
+          <span id="file-size" class="file-size"></span>
+          <button class="remove-file" onclick="clearFile()" title="Remove file">✕</button>
+        </div>
+      </div>
+
+      <!-- Framework selection -->
+      <div class="fw-section">
+        <h2 class="fw-section-title">Select Compliance Framework</h2>
+        <div class="fw-grid">
+
+          <div class="fw-card" data-fw="nist_csf" onclick="selectFramework(this)">
+            <div class="fw-card-header">
+              <div class="fw-icon nist">
+                <svg width="22" height="22" viewBox="0 0 22 22" fill="none">
+                  <circle cx="11" cy="11" r="9" stroke="currentColor" stroke-width="1.5"/>
+                  <path d="M7 11h8M11 7v8" stroke="currentColor" stroke-width="1.5"
+                        stroke-linecap="round"/>
+                </svg>
+              </div>
+              <div class="fw-radio"></div>
+            </div>
+            <div class="fw-name">NIST CSF 2.0</div>
+            <div class="fw-desc">NIST Cybersecurity Framework</div>
+            <div class="fw-meta">106 subcategory controls · 6 functions</div>
+          </div>
+
+          <div class="fw-card" data-fw="iso_27001" onclick="selectFramework(this)">
+            <div class="fw-card-header">
+              <div class="fw-icon iso">
+                <svg width="22" height="22" viewBox="0 0 22 22" fill="none">
+                  <circle cx="11" cy="11" r="9" stroke="currentColor" stroke-width="1.5"/>
+                  <path d="M11 6v5l3 3" stroke="currentColor" stroke-width="1.5"
+                        stroke-linecap="round"/>
+                </svg>
+              </div>
+              <div class="fw-radio"></div>
+            </div>
+            <div class="fw-name">ISO 27001:2022</div>
+            <div class="fw-desc">Information Security Management</div>
+            <div class="fw-meta">93 controls · 4 categories</div>
+          </div>
+
+          <div class="fw-card" data-fw="soc2" onclick="selectFramework(this)">
+            <div class="fw-card-header">
+              <div class="fw-icon soc">
+                <svg width="22" height="22" viewBox="0 0 22 22" fill="none">
+                  <path d="M11 3L4 7v5c0 4.4 3 8 7 9.2C15 19.9 18 16.4 18 12V7L11 3z"
+                        stroke="currentColor" stroke-width="1.5"/>
+                  <path d="M8 12l2.5 2.5L14 9" stroke="currentColor" stroke-width="1.5"
+                        stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+              </div>
+              <div class="fw-radio"></div>
+            </div>
+            <div class="fw-name">SOC 2 Type II</div>
+            <div class="fw-desc">Trust Services Criteria (AICPA)</div>
+            <div class="fw-meta">TSC criteria · Security + Availability</div>
+          </div>
+
+        </div>
+      </div>
+
+      <button id="analyze-btn" class="btn btn-primary btn-lg" disabled onclick="startAnalysis()">
+        <svg width="18" height="18" viewBox="0 0 18 18" fill="none">
+          <circle cx="9" cy="9" r="7" stroke="currentColor" stroke-width="1.5"/>
+          <path d="M6 9l2 2 4-4" stroke="currentColor" stroke-width="1.5"
+                stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+        Run Analysis
+      </button>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════════════════ LOADING SECTION ══════════════════════════ -->
+<section id="loading-section" class="hidden">
+  <div class="loading-container">
+    <div class="loading-card">
+      <div class="spinner-wrap">
+        <div class="spinner"></div>
+        <div class="spinner-inner"></div>
+      </div>
+      <h2 class="loading-title">Analyzing Document</h2>
+      <p class="loading-sub">Gemini AI is reviewing your controls…</p>
+      <div class="loading-steps" id="loading-steps">
+        <div class="lstep" id="step-0">
+          <span class="lstep-dot"></span>Extracting document text
+        </div>
+        <div class="lstep" id="step-1">
+          <span class="lstep-dot"></span>Loading framework controls
+        </div>
+        <div class="lstep" id="step-2">
+          <span class="lstep-dot"></span>Sending to Gemini AI
+        </div>
+        <div class="lstep" id="step-3">
+          <span class="lstep-dot"></span>Processing results
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════════ ERROR SECTION ═══════════════════════════ -->
+<section id="error-section" class="hidden">
+  <div class="loading-container">
+    <div class="error-card">
+      <div class="error-icon">
+        <svg width="48" height="48" viewBox="0 0 48 48" fill="none">
+          <circle cx="24" cy="24" r="20" stroke="#ff4444" stroke-width="2"/>
+          <path d="M24 14v12M24 32v2" stroke="#ff4444" stroke-width="2.5"
+                stroke-linecap="round"/>
+        </svg>
+      </div>
+      <h2>Analysis Failed</h2>
+      <p id="error-message" class="error-message"></p>
+      <button class="btn btn-outline" onclick="resetToUpload()">← Try Again</button>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════════════════ RESULTS SECTION ══════════════════════════ -->
+<section id="results-section" class="hidden">
+
+  <!-- Results header -->
+  <div class="results-header">
+    <div class="results-meta">
+      <h2 id="res-fw-name" class="res-fw-name"></h2>
+      <div class="res-meta-row">
+        <span class="res-meta-item">
+          <svg width="14" height="14" viewBox="0 0 14 14" fill="none">
+            <path d="M2 4h10v8H2zM5 4V2h4v2" stroke="currentColor"
+                  stroke-width="1.2" stroke-linecap="round"/>
+          </svg>
+          <span id="res-doc-name"></span>
+        </span>
+        <span class="res-meta-item">
+          <svg width="14" height="14" viewBox="0 0 14 14" fill="none">
+            <circle cx="7" cy="7" r="5" stroke="currentColor" stroke-width="1.2"/>
+            <path d="M7 4v3l2 2" stroke="currentColor" stroke-width="1.2"
+                  stroke-linecap="round"/>
+          </svg>
+          <span id="res-date"></span>
+        </span>
+      </div>
+    </div>
+    <div class="results-actions">
+      <button class="btn btn-outline" onclick="resetToUpload()">
+        ← New Analysis
+      </button>
+      <button class="btn btn-primary" id="export-btn" onclick="exportPDF()">
+        <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+          <path d="M3 12h10M8 3v7M5 8l3 3 3-3" stroke="currentColor"
+                stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+        Export PDF
+      </button>
+    </div>
+  </div>
+
+  <!-- Metrics row -->
+  <div class="metrics-row">
+
+    <!-- Circular score -->
+    <div class="card score-card">
+      <div class="card-label">Compliance Score</div>
+      <div class="score-ring-wrap">
+        <svg class="score-ring" viewBox="0 0 120 120">
+          <circle class="ring-track" cx="60" cy="60" r="50"/>
+          <circle class="ring-fill"  cx="60" cy="60" r="50" id="score-ring-arc"/>
+        </svg>
+        <div class="score-center">
+          <div class="score-number" id="score-number">—</div>
+          <div class="score-label-sm" id="score-label-sm"></div>
+        </div>
+      </div>
+      <div class="score-total" id="score-total"></div>
+    </div>
+
+    <!-- Stat cards -->
+    <div class="stat-group">
+      <div class="card stat-card stat-met">
+        <div class="stat-icon">✔</div>
+        <div class="stat-count" id="stat-met">0</div>
+        <div class="stat-name">Met</div>
+        <div class="stat-pct" id="pct-met">0%</div>
+      </div>
+      <div class="card stat-card stat-partial">
+        <div class="stat-icon">◑</div>
+        <div class="stat-count" id="stat-partial">0</div>
+        <div class="stat-name">Partial</div>
+        <div class="stat-pct" id="pct-partial">0%</div>
+      </div>
+      <div class="card stat-card stat-missing">
+        <div class="stat-icon">✕</div>
+        <div class="stat-count" id="stat-missing">0</div>
+        <div class="stat-name">Missing</div>
+        <div class="stat-pct" id="pct-missing">0%</div>
+      </div>
+    </div>
+
+    <!-- Doughnut chart -->
+    <div class="card chart-card">
+      <div class="card-label">Distribution</div>
+      <div class="chart-wrap">
+        <canvas id="doughnut-chart"></canvas>
+      </div>
+      <div class="chart-legend" id="chart-legend"></div>
+    </div>
+
+  </div><!-- /metrics-row -->
+
+  <!-- Category breakdown -->
+  <div class="card category-card">
+    <div class="card-label">Compliance by Category</div>
+    <div id="category-bars" class="category-bars"></div>
+  </div>
+
+  <!-- Controls table -->
+  <div class="card controls-card">
+    <div class="controls-header">
+      <div class="card-label">Controls Assessment
+        <span class="total-badge" id="total-badge">0 controls</span>
+      </div>
+      <div class="controls-toolbar">
+        <div class="filter-tabs" id="filter-tabs">
+          <button class="ftab active" data-filter="all"
+                  onclick="setFilter('all', this)">
+            All <span class="ftab-cnt" id="cnt-all">0</span>
+          </button>
+          <button class="ftab ftab-missing" data-filter="missing"
+                  onclick="setFilter('missing', this)">
+            Missing <span class="ftab-cnt" id="cnt-missing">0</span>
+          </button>
+          <button class="ftab ftab-partial" data-filter="partial"
+                  onclick="setFilter('partial', this)">
+            Partial <span class="ftab-cnt" id="cnt-partial">0</span>
+          </button>
+          <button class="ftab ftab-met" data-filter="met"
+                  onclick="setFilter('met', this)">
+            Met <span class="ftab-cnt" id="cnt-met">0</span>
+          </button>
+        </div>
+        <input type="text" id="search-input" class="search-box"
+               placeholder="Search controls…" oninput="applyFilters()" />
+      </div>
+    </div>
+
+    <div class="table-wrap">
+      <table id="controls-table">
+        <thead>
+          <tr>
+            <th class="col-id">ID</th>
+            <th class="col-control">Control</th>
+            <th class="col-status">Status</th>
+            <th class="col-priority">Priority</th>
+            <th class="col-evidence">Evidence</th>
+            <th class="col-rec">Recommendation</th>
+          </tr>
+        </thead>
+        <tbody id="controls-tbody"></tbody>
+      </table>
+      <div id="no-results" class="no-results hidden">
+        No controls match the current filter.
+      </div>
+    </div>
+  </div>
+
+</section><!-- /results-section -->
+</main>
+
+<footer class="site-footer">
+  <span>AI Compliance Gap Analyzer</span>
+  <span class="footer-sep">·</span>
+  <span>Powered by Google Gemini 2.5 Flash</span>
+</footer>
+
+<!-- ═══════════════════════════════ SCRIPT ═══════════════════════════════ -->
+<script>
+/* ── State ─────────────────────────────────────────────────────────────── */
+let selectedFramework = null;
+let selectedFile      = null;
+let analysisData      = null;
+let activeFilter      = 'all';
+let doughnutChart     = null;
+let loadingTimer      = null;
+
+/* ── UI helpers ────────────────────────────────────────────────────────── */
+const $  = id => document.getElementById(id);
+const show = id => $(id).classList.remove('hidden');
+const hide = id => $(id).classList.add('hidden');
+
+function showSection(id) {
+  ['upload-section','loading-section','error-section','results-section']
+    .forEach(s => s === id ? show(s) : hide(s));
+}
+
+/* ── File handling ─────────────────────────────────────────────────────── */
+const dropzone  = $('dropzone');
+const fileInput = $('file-input');
+
+dropzone.addEventListener('dragover', e => {
+  e.preventDefault();
+  dropzone.classList.add('drag-over');
+});
+dropzone.addEventListener('dragleave', () => dropzone.classList.remove('drag-over'));
+dropzone.addEventListener('drop', e => {
+  e.preventDefault();
+  dropzone.classList.remove('drag-over');
+  const f = e.dataTransfer.files[0];
+  if (f) handleFile(f);
+});
+fileInput.addEventListener('change', () => {
+  if (fileInput.files[0]) handleFile(fileInput.files[0]);
+});
+
+function handleFile(file) {
+  const ext = file.name.split('.').pop().toLowerCase();
+  if (!['pdf', 'txt'].includes(ext)) {
+    showError('Only PDF and TXT files are supported.');
+    return;
+  }
+  selectedFile = file;
+  $('file-name').textContent = file.name;
+  $('file-size').textContent = formatBytes(file.size);
+  show('file-info');
+  dropzone.classList.add('has-file');
+  updateAnalyzeBtn();
+}
+
+function clearFile() {
+  selectedFile = null;
+  fileInput.value = '';
+  hide('file-info');
+  dropzone.classList.remove('has-file');
+  updateAnalyzeBtn();
+}
+
+function formatBytes(bytes) {
+  if (bytes < 1024) return bytes + ' B';
+  if (bytes < 1048576) return (bytes / 1024).toFixed(1) + ' KB';
+  return (bytes / 1048576).toFixed(1) + ' MB';
+}
+
+/* ── Framework selection ───────────────────────────────────────────────── */
+function selectFramework(card) {
+  document.querySelectorAll('.fw-card').forEach(c => c.classList.remove('selected'));
+  card.classList.add('selected');
+  selectedFramework = card.dataset.fw;
+  updateAnalyzeBtn();
+}
+
+function updateAnalyzeBtn() {
+  $('analyze-btn').disabled = !(selectedFile && selectedFramework);
+}
+
+/* ── Loading animation ─────────────────────────────────────────────────── */
+function startLoadingSteps() {
+  let step = 0;
+  const steps = [$('step-0'), $('step-1'), $('step-2'), $('step-3')];
+  steps.forEach(s => s.classList.remove('active', 'done'));
+  steps[0].classList.add('active');
+
+  loadingTimer = setInterval(() => {
+    if (step < steps.length - 1) {
+      steps[step].classList.remove('active');
+      steps[step].classList.add('done');
+      step++;
+      steps[step].classList.add('active');
+    }
+  }, 1800);
+}
+
+function stopLoadingSteps() {
+  if (loadingTimer) clearInterval(loadingTimer);
+  [$('step-0'),$('step-1'),$('step-2'),$('step-3')].forEach(s => {
+    s.classList.remove('active');
+    s.classList.add('done');
+  });
+}
+
+/* ── Analysis ──────────────────────────────────────────────────────────── */
+async function startAnalysis() {
+  if (!selectedFile || !selectedFramework) return;
+
+  showSection('loading-section');
+  startLoadingSteps();
+
+  const form = new FormData();
+  form.append('document', selectedFile);
+  form.append('framework', selectedFramework);
+
+  try {
+    const res  = await fetch('/analyze', { method: 'POST', body: form });
+    const data = await res.json();
+
+    stopLoadingSteps();
+
+    if (!res.ok || data.error) {
+      showErrorSection(data.error || 'Unknown error occurred.');
+      return;
+    }
+
+    analysisData = data;
+    renderResults(data);
+    showSection('results-section');
+
+  } catch (err) {
+    stopLoadingSteps();
+    showErrorSection('Network error: ' + err.message);
+  }
+}
+
+/* ── Render results ────────────────────────────────────────────────────── */
+function renderResults(data) {
+  // Header
+  $('res-fw-name').textContent  = data.framework_name;
+  $('res-doc-name').textContent = data.document_name;
+  $('res-date').textContent     = data.analysis_date;
+
+  // Score ring
+  const CIRCUMFERENCE = 2 * Math.PI * 50; // r=50
+  const score = data.score;
+  const arc   = $('score-ring-arc');
+  arc.style.strokeDasharray  = CIRCUMFERENCE;
+  arc.style.strokeDashoffset = CIRCUMFERENCE * (1 - score / 100);
+  arc.style.stroke = scoreColor(score);
+
+  $('score-number').textContent  = score + '%';
+  $('score-number').style.color  = scoreColor(score);
+  $('score-label-sm').textContent = scoreLabel(score);
+  $('score-total').textContent    = `${data.total} controls assessed`;
+
+  // Stat cards
+  const pct = n => data.total ? Math.round(n / data.total * 100) + '%' : '0%';
+  $('stat-met').textContent     = data.met;
+  $('stat-partial').textContent = data.partial;
+  $('stat-missing').textContent = data.missing;
+  $('pct-met').textContent      = pct(data.met);
+  $('pct-partial').textContent  = pct(data.partial);
+  $('pct-missing').textContent  = pct(data.missing);
+
+  // Chart
+  renderDoughnut(data.met, data.partial, data.missing);
+
+  // Category bars
+  renderCategoryBars(data.controls, data.framework_key);
+
+  // Table
+  renderTable(data.controls);
+}
+
+function scoreColor(s) {
+  if (s >= 75) return '#00ff88';
+  if (s >= 50) return '#ffcc00';
+  return '#ff4444';
+}
+function scoreLabel(s) {
+  if (s >= 75) return 'Good';
+  if (s >= 50) return 'Fair';
+  if (s >= 25) return 'Poor';
+  return 'Critical';
+}
+
+/* ── Doughnut chart ────────────────────────────────────────────────────── */
+function renderDoughnut(met, partial, missing) {
+  if (doughnutChart) doughnutChart.destroy();
+
+  const ctx = $('doughnut-chart').getContext('2d');
+  doughnutChart = new Chart(ctx, {
+    type: 'doughnut',
+    data: {
+      labels: ['Met', 'Partial', 'Missing'],
+      datasets: [{
+        data: [met, partial, missing],
+        backgroundColor: ['#00ff88', '#ffcc00', '#ff4444'],
+        borderColor:     ['#00cc6a', '#ccaa00', '#cc2222'],
+        borderWidth: 2,
+        hoverOffset: 6,
+      }],
+    },
+    options: {
+      responsive: true,
+      maintainAspectRatio: true,
+      cutout: '68%',
+      plugins: {
+        legend: { display: false },
+        tooltip: {
+          callbacks: {
+            label: ctx => ` ${ctx.label}: ${ctx.parsed}`,
+          },
+        },
+      },
+    },
+  });
+
+  // Custom legend
+  const total = met + partial + missing;
+  $('chart-legend').innerHTML = [
+    ['#00ff88', 'Met',     met],
+    ['#ffcc00', 'Partial', partial],
+    ['#ff4444', 'Missing', missing],
+  ].map(([color, label, count]) => `
+    <div class="legend-item">
+      <span class="legend-dot" style="background:${color}"></span>
+      <span class="legend-label">${label}</span>
+      <span class="legend-count">${count}</span>
+    </div>
+  `).join('');
+}
+
+/* ── Category bars ─────────────────────────────────────────────────────── */
+function renderCategoryBars(controls, fwKey) {
+  const groups = {};
+
+  controls.forEach(c => {
+    let raw = c.category || 'Uncategorized';
+    // For NIST CSF, group by top-level function only (before ›)
+    const group = raw.includes('›') ? raw.split('›')[0].trim() : raw;
+
+    if (!groups[group]) groups[group] = { met:0, partial:0, missing:0, total:0 };
+    const st = c.status || 'missing';
+    if (groups[group][st] !== undefined) groups[group][st]++;
+    groups[group].total++;
+  });
+
+  const container = $('category-bars');
+  container.innerHTML = '';
+
+  Object.entries(groups).forEach(([name, g]) => {
+    const score = g.total
+      ? Math.round((g.met + g.partial * 0.5) / g.total * 100)
+      : 0;
+    const metPct     = g.total ? (g.met     / g.total * 100) : 0;
+    const partialPct = g.total ? (g.partial / g.total * 100) : 0;
+
+    const row = document.createElement('div');
+    row.className = 'cat-row';
+    row.innerHTML = `
+      <div class="cat-name">${escHtml(name)}</div>
+      <div class="cat-bar-wrap">
+        <div class="cat-bar">
+          <div class="cat-bar-met"     style="width:${metPct}%"></div>
+          <div class="cat-bar-partial" style="width:${partialPct}%"></div>
+        </div>
+      </div>
+      <div class="cat-score" style="color:${scoreColor(score)}">${score}%</div>
+      <div class="cat-counts">
+        <span class="cc-met">${g.met}✔</span>
+        <span class="cc-partial">${g.partial}◑</span>
+        <span class="cc-missing">${g.missing}✕</span>
+      </div>
+    `;
+    container.appendChild(row);
+  });
+}
+
+/* ── Controls table ────────────────────────────────────────────────────── */
+function renderTable(controls) {
+  // Update counts
+  const counts = { all: controls.length, met: 0, partial: 0, missing: 0 };
+  controls.forEach(c => { if (counts[c.status] !== undefined) counts[c.status]++; });
+
+  $('cnt-all').textContent     = counts.all;
+  $('cnt-met').textContent     = counts.met;
+  $('cnt-partial').textContent = counts.partial;
+  $('cnt-missing').textContent = counts.missing;
+  $('total-badge').textContent = `${counts.all} controls`;
+
+  applyFilters();
+}
+
+function applyFilters() {
+  if (!analysisData) return;
+
+  const query   = $('search-input').value.toLowerCase().trim();
+  const controls = analysisData.controls;
+
+  const filtered = controls.filter(c => {
+    const matchFilter = activeFilter === 'all' || c.status === activeFilter;
+    if (!matchFilter) return false;
+    if (!query) return true;
+    return (
+      (c.control_id   || '').toLowerCase().includes(query) ||
+      (c.control_name || '').toLowerCase().includes(query) ||
+      (c.evidence     || '').toLowerCase().includes(query) ||
+      (c.recommendation || '').toLowerCase().includes(query) ||
+      (c.category     || '').toLowerCase().includes(query)
+    );
+  });
+
+  const tbody = $('controls-tbody');
+  tbody.innerHTML = '';
+
+  if (filtered.length === 0) {
+    show('no-results');
+  } else {
+    hide('no-results');
+    filtered.forEach(c => tbody.appendChild(buildRow(c)));
+  }
+}
+
+function buildRow(c) {
+  const tr = document.createElement('tr');
+  tr.className = `row-${c.status || 'missing'}`;
+
+  const ev  = c.evidence       || 'none';
+  const rec = c.recommendation || 'none';
+  const pr  = c.priority       || 'low';
+
+  tr.innerHTML = `
+    <td class="col-id">
+      <span class="ctrl-id">${escHtml(c.control_id || '')}</span>
+    </td>
+    <td class="col-control">
+      <div class="ctrl-name">${escHtml(c.control_name || '')}</div>
+      ${c.category ? `<div class="ctrl-cat">${escHtml(c.category)}</div>` : ''}
+    </td>
+    <td class="col-status">
+      <span class="badge badge-${c.status}">${(c.status || 'missing').toUpperCase()}</span>
+    </td>
+    <td class="col-priority">
+      <span class="prio prio-${pr}">${pr.toUpperCase()}</span>
+    </td>
+    <td class="col-evidence">
+      ${ev !== 'none'
+        ? `<span class="evidence-text">"${escHtml(ev)}"</span>`
+        : '<span class="none-text">—</span>'}
+    </td>
+    <td class="col-rec">
+      ${rec !== 'none'
+        ? `<span class="rec-text">${escHtml(rec)}</span>`
+        : '<span class="none-text">—</span>'}
+    </td>
+  `;
+  return tr;
+}
+
+function setFilter(filter, btn) {
+  activeFilter = filter;
+  document.querySelectorAll('.ftab').forEach(b => b.classList.remove('active'));
+  btn.classList.add('active');
+  applyFilters();
+}
+
+/* ── Export PDF ────────────────────────────────────────────────────────── */
+async function exportPDF() {
+  if (!analysisData) return;
+  const btn = $('export-btn');
+  btn.disabled = true;
+  btn.textContent = 'Generating…';
+
+  try {
+    const res = await fetch('/export-pdf', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify(analysisData),
+    });
+
+    if (!res.ok) {
+      const err = await res.json();
+      alert('PDF export failed: ' + (err.error || 'Unknown error'));
+      return;
+    }
+
+    const blob = await res.blob();
+    const url  = URL.createObjectURL(blob);
+    const a    = document.createElement('a');
+    a.href     = url;
+    a.download = `compliance_report_${Date.now()}.pdf`;
+    document.body.appendChild(a);
+    a.click();
+    a.remove();
+    URL.revokeObjectURL(url);
+  } finally {
+    btn.disabled    = false;
+    btn.innerHTML   = `<svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+      <path d="M3 12h10M8 3v7M5 8l3 3 3-3" stroke="currentColor"
+            stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+    </svg> Export PDF`;
+  }
+}
+
+/* ── Reset ─────────────────────────────────────────────────────────────── */
+function resetToUpload() {
+  analysisData      = null;
+  selectedFile      = null;
+  selectedFramework = null;
+  fileInput.value   = '';
+  activeFilter      = 'all';
+
+  hide('file-info');
+  dropzone.classList.remove('has-file');
+  document.querySelectorAll('.fw-card').forEach(c => c.classList.remove('selected'));
+  $('search-input').value = '';
+  $('analyze-btn').disabled = true;
+
+  if (doughnutChart) { doughnutChart.destroy(); doughnutChart = null; }
+
+  showSection('upload-section');
+  window.scrollTo({ top: 0, behavior: 'smooth' });
+}
+
+function showErrorSection(msg) {
+  $('error-message').textContent = msg;
+  showSection('error-section');
+}
+
+/* ── Util ──────────────────────────────────────────────────────────────── */
+function escHtml(str) {
+  return String(str)
+    .replace(/&/g, '&amp;')
+    .replace(/</g, '&lt;')
+    .replace(/>/g, '&gt;')
+    .replace(/"/g, '&quot;');
+}
+</script>
+
+</body>
+</html>

@@ -1,0 +1,705 @@
+{
+  "framework": {
+    "name": "SOC 2 Type II Trust Services Criteria",
+    "version": "2017 (Revised Points of Focus - 2022)",
+    "source": "AICPA",
+    "assessment_date": null,
+    "report_period": {
+      "start_date": null,
+      "end_date": null
+    }
+  },
+  "criteria": [
+    {
+      "id": "CC1",
+      "category": "Common Criteria (Security)",
+      "criteria_name": "Control Environment",
+      "description": "The entity demonstrates a commitment to competence and enforces accountability for performance of internal control responsibilities",
+      "points_of_focus": [
+        "Demonstrates commitment to integrity and ethical values",
+        "Board or management exercises oversight responsibility",
+        "Entity holds individuals accountable for control responsibilities",
+        "Entity establishes competence at appropriate levels",
+        "Entity demonstrates commitment to holding individuals accountable"
+      ],
+      "evaluation": {
+        "status": null,
+        "compliance_level": null,
+        "evidence_found": false,
+        "confidence_score": 0,
+        "document_references": [],
+        "findings": {
+          "strengths": [],
+          "gaps": [],
+          "recommendations": []
+        },
+        "test_date": null,
+        "tested_by": null
+      }
+    },
+    {
+      "id": "CC2",
+      "category": "Common Criteria (Security)",
+      "criteria_name": "Communication and Information",
+      "description": "The entity obtains or generates, uses, and communicates relevant, quality information regarding the objectives of internal control",
+      "points_of_focus": [
+        "Decisions informed by quality data and analysis",
+        "Internal communication clear and timely regarding control responsibilities",
+        "External communication about responsibilities and control"
+      ],
+      "evaluation": {
+        "status": null,
+        "compliance_level": null,
+        "evidence_found": false,
+        "confidence_score": 0,
+        "document_references": [],
+        "findings": {
+          "strengths": [],
+          "gaps": [],
+          "recommendations": []
+        },
+        "test_date": null,
+        "tested_by": null
+      }
+    },
+    {
+      "id": "CC3",
+      "category": "Common Criteria (Security)",
+      "criteria_name": "Risk Assessment",
+      "description": "The entity identifies risks to the achievement of its objectives across the entity and analyzes risks as a basis for determining how the risks should be managed",
+      "points_of_focus": [
+        "Objectives explicitly specified and communicated",
+        "Risks identified across the entity",
+        "Risks analyzed for potential impact and likelihood",
+        "Entity considers risks from new systems and technology",
+        "Management response to identified risks"
+      ],
+      "evaluation": {
+        "status": null,
+        "compliance_level": null,
+        "evidence_found": false,
+        "confidence_score": 0,
+        "document_references": [],
+        "findings": {
+          "strengths": [],
+          "gaps": [],
+          "recommendations": []
+        },
+        "test_date": null,
+        "tested_by": null
+      }
+    },
+    {
+      "id": "CC4",
+      "category": "Common Criteria (Security)",
+      "criteria_name": "Monitoring Activities",
+      "description": "The entity monitors and evaluates the effectiveness of internal control over time and receives and acts upon information for remediation",
+      "points_of_focus": [
+        "Ongoing and separate evaluations performed",
+        "Evaluation results documented and communicated",
+        "Deficiencies communicated timely based on severity",
+        "Remediation activities tracked and monitored"
+      ],
+      "evaluation": {
+        "status": null,
+        "compliance_level": null,
+        "evidence_found": false,
+        "confidence_score": 0,
+        "document_references": [],
+        "findings": {
+          "strengths": [],
+          "gaps": [],
+          "recommendations": []
+        },
+        "test_date": null,
+        "tested_by": null
+      }
+    },
+    {
+      "id": "CC5",
+      "category": "Common Criteria (Security)",
+      "criteria_name": "Control Activities",
+      "description": "The entity selects, develops, and deploys control activities to achieve objectives and respond to risks",
+      "points_of_focus": [
+        "Control activities developed to manage identified risks",
+        "Control activities selected and developed considering cost-benefit analysis",
+        "Control activities include preventive and detective controls",
+        "Control activities include both automated and manual procedures"
+      ],
+      "evaluation": {
+        "status": null,
+        "compliance_level": null,
+        "evidence_found": false,
+        "confidence_score": 0,
+        "document_references": [],
+        "findings": {
+          "strengths": [],
+          "gaps": [],
+          "recommendations": []
+        },
+        "test_date": null,
+        "tested_by": null
+      }
+    },
+    {
+      "id": "CC6",
+      "category": "Common Criteria (Security)",
+      "criteria_name": "Logical and Physical Access Controls",
+      "description": "The entity implements logical access security software, infrastructure, and architectures to protect against unauthorized access and to support the delivery of key objectives",
+      "points_of_focus": [
+        "System access restricted to authorized users",
+        "Access rights managed and reviewed periodically",
+        "Physical access to facilities and infrastructure restricted",
+        "System boundaries defined and protected",
+        "Encryption used for data in transit and at rest"
+      ],
+      "evaluation": {
+        "status": null,
+        "compliance_level": null,
+        "evidence_found": false,
+        "confidence_score": 0,
+        "document_references": [],
+        "findings": {
+          "strengths": [],
+          "gaps": [],
+          "recommendations": []
+        },
+        "test_date": null,
+        "tested_by": null
+      }
+    },
+    {
+      "id": "CC7",
+      "category": "Common Criteria (Security)",
+      "criteria_name": "System Operations",
+      "description": "The entity implements policies and procedures over system operations, including system monitoring, to manage the system and achieve its objectives",
+      "points_of_focus": [
+        "System operations procedures documented and communicated",
+        "System monitoring procedures in place",
+        "Incident response procedures defined and tested",
+        "Disaster recovery procedures in place and tested",
+        "System availability and performance monitoring"
+      ],
+      "evaluation": {
+        "status": null,
+        "compliance_level": null,
+        "evidence_found": false,
+        "confidence_score": 0,
+        "document_references": [],
+        "findings": {
+          "strengths": [],
+          "gaps": [],
+          "recommendations": []
+        },
+        "test_date": null,
+        "tested_by": null
+      }
+    },
+    {
+      "id": "CC8",
+      "category": "Common Criteria (Security)",
+      "criteria_name": "Change Management",
+      "description": "The entity implements policies and procedures over changes to system components and operation to achieve its objectives",
+      "points_of_focus": [
+        "Changes to system components authorized and approved",
+        "Impact of changes evaluated prior to implementation",
+        "Changes testing performed in non-production environment",
+        "Changes documented and communicated",
+        "System configuration reviewed and approved"
+      ],
+      "evaluation": {
+        "status": null,
+        "compliance_level": null,
+        "evidence_found": false,
+        "confidence_score": 0,
+        "document_references": [],
+        "findings": {
+          "strengths": [],
+          "gaps": [],
+          "recommendations": []
+        },
+        "test_date": null,
+        "tested_by": null
+      }
+    },
+    {
+      "id": "CC9",
+      "category": "Common Criteria (Security)",
+      "criteria_name": "Risk Mitigation",
+      "description": "The entity identifies, selects, and develops risk mitigation activities for risks arising from potential business disruptions and other risks",
+      "points_of_focus": [
+        "Business disruption risks identified and analyzed",
+        "Vendor relationships evaluated and managed",
+        "Business continuity planning and testing",
+        "Risk mitigation activities selected and implemented",
+        "Third-party service organization risks monitored"
+      ],
+      "evaluation": {
+        "status": null,
+        "compliance_level": null,
+        "evidence_found": false,
+        "confidence_score": 0,
+        "document_references": [],
+        "findings": {
+          "strengths": [],
+          "gaps": [],
+          "recommendations": []
+        },
+        "test_date": null,
+        "tested_by": null
+      }
+    },
+    {
+      "id": "A1",
+      "category": "Availability",
+      "criteria_name": "Processing Capacity and Performance",
+      "description": "The entity maintains, monitors, and evaluates current processing capacity and use of system components to manage capacity demand and enable implementation of additional capacity",
+      "points_of_focus": [
+        "Processing capacity monitored and evaluated",
+        "Capacity demand forecasted and managed",
+        "Additional capacity planned and implemented",
+        "System performance monitored and optimized"
+      ],
+      "evaluation": {
+        "status": null,
+        "compliance_level": null,
+        "evidence_found": false,
+        "confidence_score": 0,
+        "document_references": [],
+        "findings": {
+          "strengths": [],
+          "gaps": [],
+          "recommendations": []
+        },
+        "test_date": null,
+        "tested_by": null
+      }
+    },
+    {
+      "id": "A2",
+      "category": "Availability",
+      "criteria_name": "Availability and Continuity",
+      "description": "The entity authorizes, designs, develops, configures, documents, tests, approves, maintains, monitors, and retains its information and related assets to meet its objectives related to availability",
+      "points_of_focus": [
+        "System design supports availability objectives",
+        "Data backups performed and tested regularly",
+        "System redundancy and failover mechanisms implemented",
+        "System monitoring and alerting in place",
+        "Service level agreements defined and monitored"
+      ],
+      "evaluation": {
+        "status": null,
+        "compliance_level": null,
+        "evidence_found": false,
+        "confidence_score": 0,
+        "document_references": [],
+        "findings": {
+          "strengths": [],
+          "gaps": [],
+          "recommendations": []
+        },
+        "test_date": null,
+        "tested_by": null
+      }
+    },
+    {
+      "id": "A3",
+      "category": "Availability",
+      "criteria_name": "Recovery Planning",
+      "description": "The entity tests recovery plan procedures supporting system recovery to meet its objectives",
+      "points_of_focus": [
+        "Recovery plans documented and maintained",
+        "Recovery objectives defined and communicated",
+        "Recovery procedures tested periodically",
+        "Recovery testing results documented",
+        "Business continuity and disaster recovery integrated"
+      ],
+      "evaluation": {
+        "status": null,
+        "compliance_level": null,
+        "evidence_found": false,
+        "confidence_score": 0,
+        "document_references": [],
+        "findings": {
+          "strengths": [],
+          "gaps": [],
+          "recommendations": []
+        },
+        "test_date": null,
+        "tested_by": null
+      }
+    },
+    {
+      "id": "PI1",
+      "category": "Processing Integrity",
+      "criteria_name": "Information Quality and Completeness",
+      "description": "The entity obtains or generates, uses, and communicates relevant, quality information regarding the objectives related to processing to support the use of products and services",
+      "points_of_focus": [
+        "Information requirements defined and communicated",
+        "Information quality standards established",
+        "Data definitions and specifications documented",
+        "System specifications address processing objectives",
+        "Information completeness and accuracy monitored"
+      ],
+      "evaluation": {
+        "status": null,
+        "compliance_level": null,
+        "evidence_found": false,
+        "confidence_score": 0,
+        "document_references": [],
+        "findings": {
+          "strengths": [],
+          "gaps": [],
+          "recommendations": []
+        },
+        "test_date": null,
+        "tested_by": null
+      }
+    },
+    {
+      "id": "PI2",
+      "category": "Processing Integrity",
+      "criteria_name": "System Processing and Authorization",
+      "description": "The entity implements policies and procedures over system inputs, processing, storage, and outputs to ensure complete, valid, accurate, timely, and authorized processing",
+      "points_of_focus": [
+        "Input controls validate completeness and accuracy",
+        "Processing controls ensure correct calculations and logic",
+        "Output controls verify accuracy and completeness",
+        "System processing authorized and monitored",
+        "Data storage protected and accessible"
+      ],
+      "evaluation": {
+        "status": null,
+        "compliance_level": null,
+        "evidence_found": false,
+        "confidence_score": 0,
+        "document_references": [],
+        "findings": {
+          "strengths": [],
+          "gaps": [],
+          "recommendations": []
+        },
+        "test_date": null,
+        "tested_by": null
+      }
+    },
+    {
+      "id": "C1",
+      "category": "Confidentiality",
+      "criteria_name": "Confidential Information Protection and Disposal",
+      "description": "The entity identifies and maintains confidential information to meet the entity's objectives related to confidentiality and disposes of confidential information to prevent unauthorized disclosure",
+      "points_of_focus": [
+        "Confidential information identified and classified",
+        "Access to confidential information restricted",
+        "Confidential information in non-production environments controlled",
+        "Encryption used for confidential information",
+        "Confidential information disposed securely"
+      ],
+      "evaluation": {
+        "status": null,
+        "compliance_level": null,
+        "evidence_found": false,
+        "confidence_score": 0,
+        "document_references": [],
+        "findings": {
+          "strengths": [],
+          "gaps": [],
+          "recommendations": []
+        },
+        "test_date": null,
+        "tested_by": null
+      }
+    },
+    {
+      "id": "P1",
+      "category": "Privacy",
+      "criteria_name": "Notice and Communication of Privacy Objectives",
+      "description": "The entity provides notice to data subjects about its privacy practices to meet its objectives related to privacy and updates notices in a timely manner",
+      "points_of_focus": [
+        "Privacy notice provided to data subjects",
+        "Privacy practices clearly communicated",
+        "Notice includes purposes and uses of personal information",
+        "Notice updated for material changes",
+        "Notice easily accessible and understandable"
+      ],
+      "evaluation": {
+        "status": null,
+        "compliance_level": null,
+        "evidence_found": false,
+        "confidence_score": 0,
+        "document_references": [],
+        "findings": {
+          "strengths": [],
+          "gaps": [],
+          "recommendations": []
+        },
+        "test_date": null,
+        "tested_by": null
+      }
+    },
+    {
+      "id": "P2",
+      "category": "Privacy",
+      "criteria_name": "Choice and Consent",
+      "description": "The entity communicates choices available regarding the collection, use, retention, disclosure, and disposal of personal information and obtains consent",
+      "points_of_focus": [
+        "Choices available communicated to data subjects",
+        "Consent obtained prior to data collection",
+        "Consent mechanism transparent and easy to use",
+        "Withdrawal of consent process available",
+        "Consent records maintained and auditable"
+      ],
+      "evaluation": {
+        "status": null,
+        "compliance_level": null,
+        "evidence_found": false,
+        "confidence_score": 0,
+        "document_references": [],
+        "findings": {
+          "strengths": [],
+          "gaps": [],
+          "recommendations": []
+        },
+        "test_date": null,
+        "tested_by": null
+      }
+    },
+    {
+      "id": "P3",
+      "category": "Privacy",
+      "criteria_name": "Collection Limitation",
+      "description": "The entity collects personal information to meet its stated objectives related to privacy, limiting collection to only necessary information",
+      "points_of_focus": [
+        "Personal information limited to stated purposes",
+        "Collection justified by business requirements",
+        "Unnecessary information not collected",
+        "Collection methods transparent",
+        "Data minimization principles applied"
+      ],
+      "evaluation": {
+        "status": null,
+        "compliance_level": null,
+        "evidence_found": false,
+        "confidence_score": 0,
+        "document_references": [],
+        "findings": {
+          "strengths": [],
+          "gaps": [],
+          "recommendations": []
+        },
+        "test_date": null,
+        "tested_by": null
+      }
+    },
+    {
+      "id": "P4",
+      "category": "Privacy",
+      "criteria_name": "Use and Retention",
+      "description": "The entity uses personal information consistent with the objectives related to privacy and retains personal information consistent with its objectives",
+      "points_of_focus": [
+        "Personal information used consistent with notice",
+        "Use limited to stated purposes",
+        "Retention periods defined and enforced",
+        "Use restrictions documented and monitored",
+        "Retention schedule implemented and followed"
+      ],
+      "evaluation": {
+        "status": null,
+        "compliance_level": null,
+        "evidence_found": false,
+        "confidence_score": 0,
+        "document_references": [],
+        "findings": {
+          "strengths": [],
+          "gaps": [],
+          "recommendations": []
+        },
+        "test_date": null,
+        "tested_by": null
+      }
+    },
+    {
+      "id": "P5",
+      "category": "Privacy",
+      "criteria_name": "Access, Correction, and Deletion",
+      "description": "The entity provides identified and authenticated data subjects the ability to access their stored personal information and correct inaccuracies or request deletion",
+      "points_of_focus": [
+        "Data subject access rights implemented",
+        "Correction request process available",
+        "Deletion request process available",
+        "Access requests processed timely",
+        "Authentication of data subjects enforced"
+      ],
+      "evaluation": {
+        "status": null,
+        "compliance_level": null,
+        "evidence_found": false,
+        "confidence_score": 0,
+        "document_references": [],
+        "findings": {
+          "strengths": [],
+          "gaps": [],
+          "recommendations": []
+        },
+        "test_date": null,
+        "tested_by": null
+      }
+    },
+    {
+      "id": "P6",
+      "category": "Privacy",
+      "criteria_name": "Disclosure to Third Parties",
+      "description": "The entity discloses personal information to third parties with the explicit consent of data subjects and ensures third parties are bound by appropriate confidentiality and use restrictions",
+      "points_of_focus": [
+        "Third-party disclosure requires explicit consent",
+        "Consent obtained prior to disclosure",
+        "Third-party contracts include data protection terms",
+        "Third-party data handling monitored",
+        "Unauthorized disclosures prevented"
+      ],
+      "evaluation": {
+        "status": null,
+        "compliance_level": null,
+        "evidence_found": false,
+        "confidence_score": 0,
+        "document_references": [],
+        "findings": {
+          "strengths": [],
+          "gaps": [],
+          "recommendations": []
+        },
+        "test_date": null,
+        "tested_by": null
+      }
+    },
+    {
+      "id": "P7",
+      "category": "Privacy",
+      "criteria_name": "Security of Personal Information",
+      "description": "The entity protects personal information against unauthorized access, use, or disclosure through appropriate security measures",
+      "points_of_focus": [
+        "Security controls protect personal information",
+        "Encryption applied to personal information",
+        "Access controls restrict unauthorized access",
+        "Transmission security implemented",
+        "Security monitoring and logging in place"
+      ],
+      "evaluation": {
+        "status": null,
+        "compliance_level": null,
+        "evidence_found": false,
+        "confidence_score": 0,
+        "document_references": [],
+        "findings": {
+          "strengths": [],
+          "gaps": [],
+          "recommendations": []
+        },
+        "test_date": null,
+        "tested_by": null
+      }
+    },
+    {
+      "id": "P8",
+      "category": "Privacy",
+      "criteria_name": "Quality of Personal Information",
+      "description": "The entity maintains accurate, current, and complete personal information to meet objectives related to privacy",
+      "points_of_focus": [
+        "Personal information accuracy monitored",
+        "Data quality controls implemented",
+        "Inaccurate information corrected",
+        "Obsolete information removed",
+        "Data completeness verified"
+      ],
+      "evaluation": {
+        "status": null,
+        "compliance_level": null,
+        "evidence_found": false,
+        "confidence_score": 0,
+        "document_references": [],
+        "findings": {
+          "strengths": [],
+          "gaps": [],
+          "recommendations": []
+        },
+        "test_date": null,
+        "tested_by": null
+      }
+    }
+  ],
+  "report_summary": {
+    "total_criteria": 22,
+    "criteria_by_category": {
+      "Common Criteria (Security)": 9,
+      "Availability": 3,
+      "Processing Integrity": 2,
+      "Confidentiality": 1,
+      "Privacy": 8
+    },
+    "assessment_metrics": {
+      "total_evaluated": 0,
+      "compliant": 0,
+      "partially_compliant": 0,
+      "non_compliant": 0,
+      "not_applicable": 0,
+      "overall_compliance_percentage": 0,
+      "average_confidence_score": 0,
+      "criteria_with_gaps": 0
+    },
+    "category_summary": {
+      "Common Criteria (Security)": {
+        "compliant": 0,
+        "partially_compliant": 0,
+        "non_compliant": 0,
+        "compliance_percentage": 0
+      },
+      "Availability": {
+        "compliant": 0,
+        "partially_compliant": 0,
+        "non_compliant": 0,
+        "compliance_percentage": 0
+      },
+      "Processing Integrity": {
+        "compliant": 0,
+        "partially_compliant": 0,
+        "non_compliant": 0,
+        "compliance_percentage": 0
+      },
+      "Confidentiality": {
+        "compliant": 0,
+        "partially_compliant": 0,
+        "non_compliant": 0,
+        "compliance_percentage": 0
+      },
+      "Privacy": {
+        "compliant": 0,
+        "partially_compliant": 0,
+        "non_compliant": 0,
+        "compliance_percentage": 0
+      }
+    },
+    "timeline": {
+      "assessment_start_date": null,
+      "assessment_end_date": null,
+      "assessment_duration_days": 0
+    }
+  },
+  "findings_summary": {
+    "total_strengths": 0,
+    "total_gaps": 0,
+    "total_recommendations": 0,
+    "critical_gaps": [],
+    "high_priority_recommendations": [],
+    "medium_priority_recommendations": [],
+    "low_priority_recommendations": []
+  },
+  "metadata": {
+    "document_analyzed": null,
+    "document_hash": null,
+    "analysis_timestamp": null,
+    "analysis_version": "1.0",
+    "analyst_name": null,
+    "review_status": "pending",
+    "next_review_date": null
+  }
+}
