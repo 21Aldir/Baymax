@@ -1,2 +1,2 @@
 # Baymax
-AI Powered Compliance Tool, Check Overall health of you Policy (NIST CF, ISO 27001, SOC 2)
+AI Powered Compliance Tool, Check Overall health of you Policy (NIST CSF, ISO 27001, SOC 2)
