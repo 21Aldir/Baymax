@@ -848,6 +848,9 @@ btnAnalyze.addEventListener('click', async () => {
   goTo(2);
   startLoading();
 
+  const MIN_LOADING_MS = 900;
+  const t0 = Date.now();
+
   const fd = new FormData();
   fd.append('document',  selectedFile);
   fd.append('framework', selectedFw);
@@ -855,6 +858,12 @@ btnAnalyze.addEventListener('click', async () => {
   try {
     const res  = await fetch('/analyze', { method: 'POST', body: fd });
     const data = await res.json();
+
+    const elapsed = Date.now() - t0;
+    if (elapsed < MIN_LOADING_MS) {
+      await new Promise(r => setTimeout(r, MIN_LOADING_MS - elapsed));
+    }
+
     stopLoading();
 
     if (!res.ok || data.error) {
