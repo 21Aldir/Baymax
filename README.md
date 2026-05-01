@@ -1,11 +1,14 @@
-# Baymax — AI-Powered Compliance Gap Analysis
+# Baymax — AI-Powered GRC Gap Analysis
+
+<img width="360" height="250" alt="image" src="https://github.com/user-attachments/assets/90ba2728-4ecd-47e9-970a-498f1ca27420" />
 
 > *Policy health check for GRC professionals.* Upload a security policy, pick a framework (NIST CSF 2.0, ISO/IEC 27001:2022, or SOC 2), and get a gap analysis with cited evidence, a compliance score, and prioritized remediation recommendations — all exportable to a polished executive PDF report.
 
 <!-- ╔══════════════════════════════════════════════════════════╗
      ║  SCREENSHOT — Hero / landing screen                      ║
      ╚══════════════════════════════════════════════════════════╝ -->
-![Hero / Landing screen](docs/screenshots/01-hero.png)
+<img width="824" height="776" alt="image" src="https://github.com/user-attachments/assets/cfb763ee-08c5-4b90-b330-c302b6578b2f" />
+
 
 ---
 
@@ -70,7 +73,10 @@ Frameworks live as declarative JSON files in `frameworks/` — adding a new one 
 <!-- ╔══════════════════════════════════════════════════════════╗
      ║  SCREENSHOT — Framework selector                         ║
      ╚══════════════════════════════════════════════════════════╝ -->
-![Framework selector](docs/screenshots/02-framework-selector.png)
+![Framework selector](docs/screenshots/02-framework-selector.png)\
+
+<img width="636" height="641" alt="image" src="https://github.com/user-attachments/assets/2cda8c45-47dd-4447-9324-92e07be06ab4" />
+
 
 ---
 
@@ -86,29 +92,30 @@ Frameworks live as declarative JSON files in `frameworks/` — adding a new one 
          │ ◀───────────────────────────────────── │ 2. SHA-256 hash → cache lookup
          │                                        │ 3. is_compliance_document?
          │                                        │ 4. build_prompt(controls)
-         │  POST /export-pdf                      │ 5. Gemini 2.5 Flash
-         │ ─────────────────────────────────────▶ │ 6. parse_gemini → JSON array
+         │  POST /export-pdf                      │ 5. Haiku 4.5 Flash
+         │ ─────────────────────────────────────▶ │ 6. parse → JSON array
          │  application/pdf                       │ 7. compute_score
          │ ◀───────────────────────────────────── │ 8. cache + return
          │   (reportlab)                          │
                                                   ▼
                                         ┌──────────────────────┐
-                                        │  Google Gemini API   │
-                                        │  (gemini-2.5-flash)  │
+                                        │  Claude  API   │
+                                        │  (Haiku/Sonnet)  │
                                         └──────────────────────┘
 ```
 
 **Two endpoints, no database.** State lives in memory (`_validation_cache` and `_analysis_cache`); uploads are temporary and deleted after the analysis completes.
 
 ---
+<img width="242" height="386" alt="image" src="https://github.com/user-attachments/assets/c25c7563-38b1-4a51-bc3e-50470396b0f8" />
 
 ## How the analysis works
 
 1. **Extraction** (`pdf_to_markdown`): the PDF is converted to lightweight Markdown — ALL-CAPS lines are promoted to `##`, Title Case to `###`, and bullets are normalized. This gives the LLM a hierarchical structure that's easier to map than flat text.
 2. **Hash + cache**: SHA-256 of the extracted text. If this document has already been analyzed against this framework, the cached result is returned immediately.
-3. **Relevance pre-filter**: before the expensive analysis, Gemini is asked with `max_tokens=5` whether the document deals with infosec / compliance / privacy / governance. If the answer doesn't start with "YES", the request aborts with a clear error. This avoids spending 32K tokens analyzing a restaurant menu.
+3. **Relevance pre-filter**: before the expensive analysis, Claude is asked with `max_tokens=5` whether the document deals with infosec / compliance / privacy / governance. If the answer doesn't start with "YES", the request aborts with a clear error. This avoids spending 32K tokens analyzing a restaurant menu.
 4. **Analysis prompt** (`build_prompt`): the model receives a role ("senior GRC analyst"), a 12K-character excerpt of the document, the slimmed `{id, name}` list of controls, and a strict JSON contract for the output.
-5. **Defensive parsing** (`parse_gemini`): code fences are stripped, the first `[` and last `]` are located, and `json.loads` runs on that slice. Resilient to the "thinking" preambles Gemini 2.5 sometimes emits.
+5. **Defensive parsing** (`parse`): code fences are stripped, the first `[` and last `]` are located, and `json.loads` runs on that slice. Resilient to the "thinking" preambles Gemini 2.5 sometimes emits.
 6. **Scoring**: `(met + 0.5 × partial) / total × 100`. Controls that the model omitted due to total absence of evidence don't penalize the score (design decision — see below).
 7. **PDF (`/export-pdf`)**: ReportLab renders a 4-section layout — meta header, executive summary, color-coded per-control detail table, and a recommendations block sorted by priority.
 
@@ -117,6 +124,9 @@ Frameworks live as declarative JSON files in `frameworks/` — adding a new one 
      ╚══════════════════════════════════════════════════════════╝ -->
 ![Analysis results](docs/screenshots/03-results.png)
 
+<img width="901" height="446" alt="image" src="https://github.com/user-attachments/assets/1d74db16-958b-4c6c-acf3-309216a3aa40" />
+
+
 ---
 
 ## Tech stack
@@ -124,7 +134,7 @@ Frameworks live as declarative JSON files in `frameworks/` — adding a new one 
 | Layer | Technology |
 |---|---|
 | **Backend** | Python 3.11+, Flask 3 |
-| **LLM** | Google Gemini 2.5 Flash (`google-genai`) |
+| **LLM** | Anthropic Claude Haiku 4.5  |
 | **PDF in** | pypdf 4 |
 | **PDF out** | ReportLab 4 (Platypus) |
 | **Frontend** | Vanilla HTML/CSS/JS + anime.js for transitions |
@@ -135,40 +145,6 @@ No database, no frontend framework, no container — a single `python app.py` bo
 
 ---
 
-## Installation
-
-### Requirements
-
-- Python 3.11 or higher
-- A Google Gemini API key ([AI Studio](https://aistudio.google.com/))
-
-### Steps
-
-```bash
-# 1. Clone
-git clone https://github.com/<your-username>/Baymax.git
-cd Baymax
-
-# 2. Virtual environment
-python -m venv venv
-# Windows
-venv\Scripts\activate
-# macOS / Linux
-source venv/bin/activate
-
-# 3. Dependencies
-pip install -r requirements.txt
-
-# 4. Environment variables
-echo "GEMINI_API_KEY=your_api_key_here" > .env
-
-# 5. Run
-python app.py
-```
-
-Then open [http://localhost:5000](http://localhost:5000).
-
----
 
 ## Usage
 
@@ -181,9 +157,15 @@ Then open [http://localhost:5000](http://localhost:5000).
 <!-- ╔══════════════════════════════════════════════════════════╗
      ║  SCREENSHOT — Generated PDF report (pages 1-2)           ║
      ╚══════════════════════════════════════════════════════════╝ -->
-![PDF report](docs/screenshots/04-pdf-report.png)
 
----
+<img width="1196" height="140" alt="image" src="https://github.com/user-attachments/assets/049cb829-2569-4567-ba4f-244154a1cc0c" />
+
+<img width="776" height="308" alt="image" src="https://github.com/user-attachments/assets/5ab22f4c-30ff-41b8-b12a-dd1d9c090194" />
+
+<img width="660" height="445" alt="image" src="https://github.com/user-attachments/assets/6800d9a0-d408-4930-bf9e-461405421859" />
+<img width="675" height="590" alt="image" src="https://github.com/user-attachments/assets/f563da84-bb9d-4f7d-a90e-b0ae54f4621f" />
+
+
 
 ## Screenshots
 
@@ -195,13 +177,6 @@ Then open [http://localhost:5000](http://localhost:5000).
      docs/screenshots/05-recommendations.png
 -->
 
-| View | Description |
-|---|---|
-| ![Intro](docs/screenshots/01-hero.png) | Welcome screen |
-| ![Upload](docs/screenshots/02-framework-selector.png) | Document upload + framework selection |
-| ![Analysis](docs/screenshots/03-results.png) | Score and control distribution |
-| ![Detail](docs/screenshots/05-recommendations.png) | Prioritized recommendations |
-| ![PDF](docs/screenshots/04-pdf-report.png) | Executive PDF report |
 
 ---
 
@@ -211,7 +186,6 @@ Then open [http://localhost:5000](http://localhost:5000).
 Baymax/
 ├── app.py                    # Flask app + analysis and PDF logic
 ├── requirements.txt
-├── .env                      # GEMINI_API_KEY (not committed)
 ├── frameworks/
 │   ├── nist_csf.json         # NIST CSF 2.0 — 106 subcategories
 │   ├── iso_27001.json        # ISO/IEC 27001:2022 — 93 controls
@@ -225,28 +199,6 @@ Baymax/
 
 ---
 
-## Design decisions
-
-Notes for technical discussion / interview talking points:
-
-- **Why Gemini 2.5 Flash and not Pro?** Cost and latency. Flash handles the 12K-input + 32K-output prompt comfortably; Pro would multiply cost ~10× with no meaningful quality lift on this structured-mapping task.
-- **Why pre-filter the document?** Users will upload anything. Without the filter, the model would try to "find" controls in a restaurant menu and fabricate evidence. A `max_tokens=5` pre-check costs cents and removes that failure mode.
-- **Why is `evidence_found` a verbatim quote?** Auditability. A GRC analyst can verify the quote against the source document — if it isn't there, the model hallucinated and the finding is discarded. Without verbatim citation, the output is indefensible.
-- **Why does the model skip controls with no evidence?** Reporting 80 "missing" controls with empty evidence is noise that adds no value. A smaller set of actionable findings is more useful. *Explicit trade-off*: the score can look better than reality if the document is short. Consciously accepted for this first iteration.
-- **Why an in-memory cache instead of Redis / SQLite?** YAGNI. The app targets single-user / demo use. One process, one session. The first thing to change for multi-user deployment.
-- **Why Markdown as the intermediate PDF format?** It gives the LLM hierarchy signals (`##` = section) without the noise of XML/HTML, and it's robust against poorly-structured PDFs.
-
----
-
-## Limitations and future work
-
-- **Scanned (image-only) PDFs** don't work — pypdf doesn't do OCR. *Next step:* integrate Tesseract or call Gemini Vision directly.
-- **In-memory cache** is lost when the process restarts.
-- **No authentication** — designed as a single-user / local tool.
-- **Single prompt language** (English) — works with Spanish-language policies, but recommendations come back in English.
-- **No automated tests** — next milestone: golden-file tests over sample policies and snapshots of the JSON output.
-- **"Optimistic" score** because of the zero-evidence filter (see Design decisions).
-
 Roadmap ideas:
 
 - [ ] Multi-framework crosswalk (one control mapped against all three at once).
@@ -257,10 +209,7 @@ Roadmap ideas:
 
 ---
 
-## License
-
-Personal portfolio / learning project. The frameworks (NIST CSF, ISO 27001, SOC 2) are the property of their respective organizations — this project only uses them as a reference for automated analysis and does not redistribute their full normative content.
 
 ---
 
-<sub>Built by Erick Alcalá · 2026 · Questions or feedback: erick.alcala.velasco@gmail.com</sub>
+<sub>Built by E.Aldir Alcalá · 2026 · Questions or feedback: [LinkedIn(https://www.linkedin.com/in/aldiralcala/)</sub>
