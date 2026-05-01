@@ -20,13 +20,9 @@
 - [Architecture](#architecture)
 - [How the analysis works](#how-the-analysis-works)
 - [Tech stack](#tech-stack)
-- [Installation](#installation)
 - [Usage](#usage)
-- [Screenshots](#screenshots)
 - [Project structure](#project-structure)
-- [Design decisions](#design-decisions)
-- [Limitations and future work](#limitations-and-future-work)
-- [License](#license)
+
 
 ---
 
