@@ -1,2 +1,266 @@
-# Baymax
-AI Powered Compliance Tool, Check Overall health of you Policy (NIST CSF, ISO 27001, SOC 2)
+# Baymax — AI-Powered Compliance Gap Analysis
+
+> *Policy health check for GRC professionals.* Upload a security policy, pick a framework (NIST CSF 2.0, ISO/IEC 27001:2022, or SOC 2), and get a gap analysis with cited evidence, a compliance score, and prioritized remediation recommendations — all exportable to a polished executive PDF report.
+
+<!-- ╔══════════════════════════════════════════════════════════╗
+     ║  SCREENSHOT — Hero / landing screen                      ║
+     ╚══════════════════════════════════════════════════════════╝ -->
+![Hero / Landing screen](docs/screenshots/01-hero.png)
+
+---
+
+## Table of contents
+
+- [What problem does it solve?](#what-problem-does-it-solve)
+- [Features](#features)
+- [Supported frameworks](#supported-frameworks)
+- [Architecture](#architecture)
+- [How the analysis works](#how-the-analysis-works)
+- [Tech stack](#tech-stack)
+- [Installation](#installation)
+- [Usage](#usage)
+- [Screenshots](#screenshots)
+- [Project structure](#project-structure)
+- [Design decisions](#design-decisions)
+- [Limitations and future work](#limitations-and-future-work)
+- [License](#license)
+
+---
+
+## What problem does it solve?
+
+A manual gap analysis against a framework like NIST CSF 2.0 (106 subcategories), ISO 27001:2022 (93 controls), or SOC 2 can take **days of GRC analyst time** per document: read the policy, map every paragraph to the relevant controls, cite the evidence, assign a status (met / partial / missing), and write up actionable recommendations.
+
+**Baymax automates the first pass** of that work:
+
+- Takes the policy as input (PDF or TXT).
+- Validates that the document is actually security / compliance related (pre-filter).
+- Maps the content against the selected framework using an LLM (Gemini 2.5 Flash).
+- For every control returns: status, compliance level (%), **verbatim evidence quote**, actionable recommendation, confidence score, and priority.
+- Generates an executive-ready PDF report for auditors or steering committees.
+
+> The goal is not to replace the analyst, but to **shrink the time between "I have the policy" and "I have a defensible starting point"** from days to minutes.
+
+---
+
+## Features
+
+- **Multi-framework**: NIST CSF 2.0, ISO/IEC 27001:2022 Annex A, SOC 2 Trust Services Criteria.
+- **Pre-validation of the document** — rejects non-security documents before spending tokens on the analysis.
+- **Verbatim evidence quotes** from the document (≤150 chars per control) — auditor-friendly, no fabrication.
+- **Weighted compliance score**: `(met + 0.5·partial) / total · 100`.
+- **Prioritized remediations** (high / medium / low) sorted by urgency in the report.
+- **In-memory caching** (SHA-256 of doc + framework key) — re-analyzing the same document is instant.
+- **Executive PDF export** with summary, per-control detail table, and a prioritized recommendations block.
+- **Zero-evidence filter**: the model only returns controls with actual findings, avoiding noise from trivially-missing controls.
+- **Single-page UI** with smooth transitions (anime.js), dark theme, and Space Grotesk typography.
+
+---
+
+## Supported frameworks
+
+| Framework | Version | Controls / Items | Source |
+|---|---|---|---|
+| **NIST Cybersecurity Framework** | CSF 2.0 (Feb 2024) | 6 functions · 22 categories · 106 subcategories | NIST CSWP 29 |
+| **ISO/IEC 27001** | 2022 (Annex A) | 93 controls | ISO/IEC 27001:2022 + 27002:2022 |
+| **SOC 2** | TSC 2017 (rev. 2022) | Common Criteria + additional categories | AICPA |
+
+Frameworks live as declarative JSON files in `frameworks/` — adding a new one is a matter of writing the file and registering its key in `FRAMEWORK_FILES`.
+
+<!-- ╔══════════════════════════════════════════════════════════╗
+     ║  SCREENSHOT — Framework selector                         ║
+     ╚══════════════════════════════════════════════════════════╝ -->
+![Framework selector](docs/screenshots/02-framework-selector.png)
+
+---
+
+## Architecture
+
+```
+┌─────────────────┐    POST /analyze    ┌──────────────────────┐
+│   Browser       │  ─────────────────▶ │   Flask (app.py)     │
+│   (index.html)  │  multipart upload   │                      │
+└────────┬────────┘                     └─────────┬────────────┘
+         │                                        │
+         │  JSON result                           │ 1. extract_text (pypdf)
+         │ ◀───────────────────────────────────── │ 2. SHA-256 hash → cache lookup
+         │                                        │ 3. is_compliance_document?
+         │                                        │ 4. build_prompt(controls)
+         │  POST /export-pdf                      │ 5. Gemini 2.5 Flash
+         │ ─────────────────────────────────────▶ │ 6. parse_gemini → JSON array
+         │  application/pdf                       │ 7. compute_score
+         │ ◀───────────────────────────────────── │ 8. cache + return
+         │   (reportlab)                          │
+                                                  ▼
+                                        ┌──────────────────────┐
+                                        │  Google Gemini API   │
+                                        │  (gemini-2.5-flash)  │
+                                        └──────────────────────┘
+```
+
+**Two endpoints, no database.** State lives in memory (`_validation_cache` and `_analysis_cache`); uploads are temporary and deleted after the analysis completes.
+
+---
+
+## How the analysis works
+
+1. **Extraction** (`pdf_to_markdown`): the PDF is converted to lightweight Markdown — ALL-CAPS lines are promoted to `##`, Title Case to `###`, and bullets are normalized. This gives the LLM a hierarchical structure that's easier to map than flat text.
+2. **Hash + cache**: SHA-256 of the extracted text. If this document has already been analyzed against this framework, the cached result is returned immediately.
+3. **Relevance pre-filter**: before the expensive analysis, Gemini is asked with `max_tokens=5` whether the document deals with infosec / compliance / privacy / governance. If the answer doesn't start with "YES", the request aborts with a clear error. This avoids spending 32K tokens analyzing a restaurant menu.
+4. **Analysis prompt** (`build_prompt`): the model receives a role ("senior GRC analyst"), a 12K-character excerpt of the document, the slimmed `{id, name}` list of controls, and a strict JSON contract for the output.
+5. **Defensive parsing** (`parse_gemini`): code fences are stripped, the first `[` and last `]` are located, and `json.loads` runs on that slice. Resilient to the "thinking" preambles Gemini 2.5 sometimes emits.
+6. **Scoring**: `(met + 0.5 × partial) / total × 100`. Controls that the model omitted due to total absence of evidence don't penalize the score (design decision — see below).
+7. **PDF (`/export-pdf`)**: ReportLab renders a 4-section layout — meta header, executive summary, color-coded per-control detail table, and a recommendations block sorted by priority.
+
+<!-- ╔══════════════════════════════════════════════════════════╗
+     ║  SCREENSHOT — Results view with score                    ║
+     ╚══════════════════════════════════════════════════════════╝ -->
+![Analysis results](docs/screenshots/03-results.png)
+
+---
+
+## Tech stack
+
+| Layer | Technology |
+|---|---|
+| **Backend** | Python 3.11+, Flask 3 |
+| **LLM** | Google Gemini 2.5 Flash (`google-genai`) |
+| **PDF in** | pypdf 4 |
+| **PDF out** | ReportLab 4 (Platypus) |
+| **Frontend** | Vanilla HTML/CSS/JS + anime.js for transitions |
+| **Typography** | Space Grotesk + Space Mono (Google Fonts) |
+| **Config** | python-dotenv (`.env`) |
+
+No database, no frontend framework, no container — a single `python app.py` boots the whole thing.
+
+---
+
+## Installation
+
+### Requirements
+
+- Python 3.11 or higher
+- A Google Gemini API key ([AI Studio](https://aistudio.google.com/))
+
+### Steps
+
+```bash
+# 1. Clone
+git clone https://github.com/<your-username>/Baymax.git
+cd Baymax
+
+# 2. Virtual environment
+python -m venv venv
+# Windows
+venv\Scripts\activate
+# macOS / Linux
+source venv/bin/activate
+
+# 3. Dependencies
+pip install -r requirements.txt
+
+# 4. Environment variables
+echo "GEMINI_API_KEY=your_api_key_here" > .env
+
+# 5. Run
+python app.py
+```
+
+Then open [http://localhost:5000](http://localhost:5000).
+
+---
+
+## Usage
+
+1. **Upload** a security policy (PDF or TXT, up to 16 MB).
+2. **Select** one of the three available frameworks.
+3. **Wait** ~10–30 seconds — the analysis runs in a single LLM call.
+4. **Review** the results: overall score, met/partial/missing distribution, per-control evidence, and recommendations.
+5. **Export** to an executive PDF to share with stakeholders.
+
+<!-- ╔══════════════════════════════════════════════════════════╗
+     ║  SCREENSHOT — Generated PDF report (pages 1-2)           ║
+     ╚══════════════════════════════════════════════════════════╝ -->
+![PDF report](docs/screenshots/04-pdf-report.png)
+
+---
+
+## Screenshots
+
+<!-- Replace these with your real screenshots. Suggested naming:
+     docs/screenshots/01-hero.png
+     docs/screenshots/02-framework-selector.png
+     docs/screenshots/03-results.png
+     docs/screenshots/04-pdf-report.png
+     docs/screenshots/05-recommendations.png
+-->
+
+| View | Description |
+|---|---|
+| ![Intro](docs/screenshots/01-hero.png) | Welcome screen |
+| ![Upload](docs/screenshots/02-framework-selector.png) | Document upload + framework selection |
+| ![Analysis](docs/screenshots/03-results.png) | Score and control distribution |
+| ![Detail](docs/screenshots/05-recommendations.png) | Prioritized recommendations |
+| ![PDF](docs/screenshots/04-pdf-report.png) | Executive PDF report |
+
+---
+
+## Project structure
+
+```
+Baymax/
+├── app.py                    # Flask app + analysis and PDF logic
+├── requirements.txt
+├── .env                      # GEMINI_API_KEY (not committed)
+├── frameworks/
+│   ├── nist_csf.json         # NIST CSF 2.0 — 106 subcategories
+│   ├── iso_27001.json        # ISO/IEC 27001:2022 — 93 controls
+│   └── soc2.json             # SOC 2 TSC
+├── templates/
+│   └── index.html            # SPA — every screen lives in one HTML file
+├── static/
+│   └── style.css
+└── uploads/                  # Temporary — files are deleted after analysis
+```
+
+---
+
+## Design decisions
+
+Notes for technical discussion / interview talking points:
+
+- **Why Gemini 2.5 Flash and not Pro?** Cost and latency. Flash handles the 12K-input + 32K-output prompt comfortably; Pro would multiply cost ~10× with no meaningful quality lift on this structured-mapping task.
+- **Why pre-filter the document?** Users will upload anything. Without the filter, the model would try to "find" controls in a restaurant menu and fabricate evidence. A `max_tokens=5` pre-check costs cents and removes that failure mode.
+- **Why is `evidence_found` a verbatim quote?** Auditability. A GRC analyst can verify the quote against the source document — if it isn't there, the model hallucinated and the finding is discarded. Without verbatim citation, the output is indefensible.
+- **Why does the model skip controls with no evidence?** Reporting 80 "missing" controls with empty evidence is noise that adds no value. A smaller set of actionable findings is more useful. *Explicit trade-off*: the score can look better than reality if the document is short. Consciously accepted for this first iteration.
+- **Why an in-memory cache instead of Redis / SQLite?** YAGNI. The app targets single-user / demo use. One process, one session. The first thing to change for multi-user deployment.
+- **Why Markdown as the intermediate PDF format?** It gives the LLM hierarchy signals (`##` = section) without the noise of XML/HTML, and it's robust against poorly-structured PDFs.
+
+---
+
+## Limitations and future work
+
+- **Scanned (image-only) PDFs** don't work — pypdf doesn't do OCR. *Next step:* integrate Tesseract or call Gemini Vision directly.
+- **In-memory cache** is lost when the process restarts.
+- **No authentication** — designed as a single-user / local tool.
+- **Single prompt language** (English) — works with Spanish-language policies, but recommendations come back in English.
+- **No automated tests** — next milestone: golden-file tests over sample policies and snapshots of the JSON output.
+- **"Optimistic" score** because of the zero-evidence filter (see Design decisions).
+
+Roadmap ideas:
+
+- [ ] Multi-framework crosswalk (one control mapped against all three at once).
+- [ ] Per-organization history + diff between revisions of the same policy.
+- [ ] Integration with evidence repositories (Drive / SharePoint).
+- [ ] HIPAA, PCI DSS, CIS Controls support.
+- [ ] "Assistant" mode: chat about the findings, not just a static report.
+
+---
+
+## License
+
+Personal portfolio / learning project. The frameworks (NIST CSF, ISO 27001, SOC 2) are the property of their respective organizations — this project only uses them as a reference for automated analysis and does not redistribute their full normative content.
+
+---
+
+<sub>Built by Erick Alcalá · 2026 · Questions or feedback: erick.alcala.velasco@gmail.com</sub>
