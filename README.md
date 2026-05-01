@@ -1,6 +1,7 @@
 # Baymax — AI-Powered GRC Gap Analysis
 
-<img width="824"  alt="image" src="https://github.com/user-attachments/assets/90ba2728-4ecd-47e9-970a-498f1ca27420" />
+<img width="1200" height="637" alt="image" src="https://github.com/user-attachments/assets/6fc21f51-f329-4527-8d1e-ea774d666d5a" />
+
 
 > *Policy health check for GRC professionals.* Upload a security policy, pick a framework (NIST CSF 2.0, ISO/IEC 27001:2022, or SOC 2), and get a gap analysis with cited evidence, a compliance score, and prioritized remediation recommendations — all exportable to a polished executive PDF report.
 
