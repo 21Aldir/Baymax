@@ -157,9 +157,11 @@ No database, no frontend framework, no container — a single `python app.py` bo
 /
 <img width="776" height="308" alt="image" src="https://github.com/user-attachments/assets/5ab22f4c-30ff-41b8-b12a-dd1d9c090194" />
 /
-<img width="660" height="445" alt="image" src="https://github.com/user-attachments/assets/6800d9a0-d408-4930-bf9e-461405421859" />
+<img width="654" height="192" alt="image" src="https://github.com/user-attachments/assets/41621cea-9ec3-474a-bc95-5ade9e4ef6ac" />
+
 /
-<img width="675" height="590" alt="image" src="https://github.com/user-attachments/assets/f563da84-bb9d-4f7d-a90e-b0ae54f4621f" />
+<img width="660" height="236" alt="image" src="https://github.com/user-attachments/assets/2ec1fb96-37cb-4470-bab2-b74f981cbe1d" />
+
 
 
 ---
