@@ -346,13 +346,7 @@ def export_pdf():
 
     story = []
 
-    # Title
-    story += [
-        Paragraph("Compliance Gap Analysis Report",
-            ps('T', fontSize=20, fontName='Helvetica-Bold',
-               textColor=DARK, alignment=TA_CENTER, spaceAfter=4)),
 
-    ]
 
     # Meta table
     def mcell(txt, bold=False, col=None):
