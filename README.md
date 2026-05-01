@@ -73,7 +73,6 @@ Frameworks live as declarative JSON files in `frameworks/` — adding a new one 
 <!-- ╔══════════════════════════════════════════════════════════╗
      ║  SCREENSHOT — Framework selector                         ║
      ╚══════════════════════════════════════════════════════════╝ -->
-![Framework selector](docs/screenshots/02-framework-selector.png)\
 
 <img width="636" height="641" alt="image" src="https://github.com/user-attachments/assets/2cda8c45-47dd-4447-9324-92e07be06ab4" />
 
@@ -122,7 +121,6 @@ Frameworks live as declarative JSON files in `frameworks/` — adding a new one 
 <!-- ╔══════════════════════════════════════════════════════════╗
      ║  SCREENSHOT — Results view with score                    ║
      ╚══════════════════════════════════════════════════════════╝ -->
-![Analysis results](docs/screenshots/03-results.png)
 
 <img width="901" height="446" alt="image" src="https://github.com/user-attachments/assets/1d74db16-958b-4c6c-acf3-309216a3aa40" />
 
