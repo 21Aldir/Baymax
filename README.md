@@ -198,4 +198,4 @@ Roadmap ideas:
 
 ---
 
-<sub>Built by E.Aldir Alcalá · 2026 · Questions or feedback: [LinkedIn(https://www.linkedin.com/in/aldiralcala/)</sub>
+<sub>Built by E.Aldir Alcalá · 2026 · Questions or feedback: [LinkedIn](https://www.linkedin.com/in/aldiralcala/)</sub>
